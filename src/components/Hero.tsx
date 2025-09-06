@@ -42,10 +42,10 @@ const Hero = () => {
           
           <div className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft mb-8 border border-border/50">
             <p className="text-lg font-medium text-card-foreground mb-4">
-              ✨ Помогу найти ваш путь через астрологию и психологию
+              ✨ Помогу найти ваш путь через астрологию
             </p>
             <p className="text-muted-foreground">
-              Для мужчин и женщин 28-45 лет, переживающих трансформации и ищущих опору
+              Для людей, переживающих трансформации и ищущих опору
             </p>
           </div>
 
@@ -78,7 +78,7 @@ const Hero = () => {
           </div>
           
           <p id="cta-description" className="text-sm text-muted-foreground mt-4">
-            Первая консультация включает анализ натальной карты
+            Каждая консультация включает анализ натальной карты
           </p>
         </div>
       </div>
