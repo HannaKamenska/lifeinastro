@@ -129,11 +129,8 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Standard Services */}
+        {/* Standard Services (без заголовка) */}
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center text-primary">
-            Стандартные консультации
-          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {standardServices.map((service, index) => {
               const IconComponent = service.icon;
@@ -224,11 +221,8 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Individual Services */}
+        {/* Individual Services (без заголовка) */}
         <div>
-          <h3 className="text-2xl font-semibold mb-8 text-center text-accent-deep">
-            Индивидуальные консультации
-          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {individualServices.map((service, index) => {
               const IconComponent = service.icon;
@@ -254,67 +248,67 @@ const Services = () => {
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent className="pt-0">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-2xl font-bold text-accent-deep">
-                        {service.price}
-                      </span>
-                      <Badge
-                        variant="outline"
-                        className="border-accent text-accent-deep"
-                      >
-                        {service.duration}
-                      </Badge>
-                    </div>
-
-                    <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <div
-                            className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"
-                            aria-hidden="true"
-                          ></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="space-y-2">
-                      <Button
-                        className="w-full gradient-mystical border-0 text-accent-foreground hover:shadow-mystical transition-smooth focus-ring"
-                        asChild
-                      >
-                        <a
-                          href="https://forms.gle/uXqtAvbuG2G3pk5z7"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`Записаться на ${service.title}`}
+                    <CardContent className="pt-0">
+                      <div className="flex justify-between items-center mb-4">
+                        <span className="text-2xl font-bold text-accent-deep">
+                          {service.price}
+                        </span>
+                        <Badge
+                          variant="outline"
+                          className="border-accent text-accent-deep"
                         >
-                          Записаться
-                        </a>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="w-full border-accent/30 text-accent-deep hover:bg-accent/10 focus-ring"
-                        onClick={() => {
-                          setActiveService((prev) =>
-                            prev === service.id ? null : service.id
-                          );
-                          const detailsSection = document.getElementById(
-                            `service-details-${service.id}`
-                          );
-                          if (detailsSection) {
-                            detailsSection.scrollIntoView({
-                              behavior: "smooth",
-                            });
-                          }
-                        }}
-                        aria-label={`Подробнее о ${service.title}`}
-                      >
-                        Подробнее
-                      </Button>
-                    </div>
-                  </CardContent>
+                          {service.duration}
+                        </Badge>
+                      </div>
+
+                      <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <div
+                              className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"
+                              aria-hidden="true"
+                            ></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="space-y-2">
+                        <Button
+                          className="w-full gradient-mystical border-0 text-accent-foreground hover:shadow-mystical transition-smooth focus-ring"
+                          asChild
+                        >
+                          <a
+                            href="https://forms.gle/uXqtAvbuG2G3pk5z7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Записаться на ${service.title}`}
+                          >
+                            Записаться
+                          </a>
+                        </Button>
+                        <Button
+                          variant="outline"
+                          className="w-full border-accent/30 text-accent-deep hover:bg-accent/10 focus-ring"
+                          onClick={() => {
+                            setActiveService((prev) =>
+                              prev === service.id ? null : service.id
+                            );
+                            const detailsSection = document.getElementById(
+                              `service-details-${service.id}`
+                            );
+                            if (detailsSection) {
+                              detailsSection.scrollIntoView({
+                                behavior: "smooth",
+                              });
+                            }
+                          }}
+                          aria-label={`Подробнее о ${service.title}`}
+                        >
+                          Подробнее
+                        </Button>
+                      </div>
+                    </CardContent>
                 </Card>
               );
             })}
