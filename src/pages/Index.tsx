@@ -1,12 +1,110 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import InteractiveQuiz from "@/components/InteractiveQuiz";
+import About from "@/components/About";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Blog from "@/components/Blog";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    // Add structured data for SEO
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Life in Astro - Астрологические консультации",
+      "description": "Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию.",
+      "url": "https://98f9be51-2a57-4ec1-93ff-81c3b389db6a.lovableproject.com",
+      "serviceType": "Астрологические консультации",
+      "provider": {
+        "@type": "Person",
+        "name": "Life in Astro",
+        "jobTitle": "Астролог-консультант"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Европейский Союз"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Астрологические услуги",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Натальная карта",
+              "description": "Полный анализ личности через призму астрологии"
+            },
+            "price": "80",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Синастрия",
+              "description": "Совместимость и динамика отношений"
+            },
+            "price": "100",
+            "priceCurrency": "EUR"
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "lifeinastro.tg@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "4"
+      }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup on unmount
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {/* Skip to content link - always first focusable element */}
+      <a 
+        href="#main-content" 
+        className="skip-link"
+        tabIndex={1}
+      >
+        Перейти к основному содержанию
+      </a>
+      
+      <Navigation />
+      
+      <main id="main-content" role="main">
+        <Hero />
+        <Services />
+        <InteractiveQuiz />
+        <About />
+        <Testimonials />
+        <Contact />
+        <Blog />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
