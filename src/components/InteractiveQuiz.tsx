@@ -192,7 +192,7 @@ const InteractiveQuiz = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 id="quiz-heading" className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Что говорит о вас ваша Луна?
+            Стихия твоей Луны: ключ к себе
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Пройдите короткий тест и узнайте больше о своем эмоциональном мире
