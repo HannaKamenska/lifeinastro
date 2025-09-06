@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar } from "lucide-react";
+import ServiceDetails from "./ServiceDetails";
 
 const Services = () => {
   const services = [
@@ -162,11 +163,15 @@ const Services = () => {
                       <Button 
                         variant="outline" 
                         className="w-full border-primary/30 text-primary hover:bg-primary/10 focus-ring"
-                        asChild
+                        onClick={() => {
+                          const detailsSection = document.getElementById(`service-details-${service.id}`);
+                          if (detailsSection) {
+                            detailsSection.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
+                        aria-label={`Подробнее о ${service.title}`}
                       >
-                        <a href={`#service-${service.id}`} aria-label={`Подробнее о ${service.title}`}>
-                          Подробнее
-                        </a>
+                        Подробнее
                       </Button>
                     </div>
                   </CardContent>
@@ -236,11 +241,15 @@ const Services = () => {
                       <Button 
                         variant="outline" 
                         className="w-full border-accent/30 text-accent-deep hover:bg-accent/10 focus-ring"
-                        asChild
+                        onClick={() => {
+                          const detailsSection = document.getElementById(`service-details-${service.id}`);
+                          if (detailsSection) {
+                            detailsSection.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
+                        aria-label={`Подробнее о ${service.title}`}
                       >
-                        <a href={`#service-${service.id}`} aria-label={`Подробнее о ${service.title}`}>
-                          Подробнее
-                        </a>
+                        Подробнее
                       </Button>
                     </div>
                   </CardContent>
@@ -248,6 +257,15 @@ const Services = () => {
               );
             })}
           </div>
+        </div>
+
+        {/* Service Details Sections */}
+        <div className="space-y-8 mt-16">
+          {services.map((service) => (
+            <div key={`details-${service.id}`} id={`service-details-${service.id}`}>
+              <ServiceDetails serviceId={`service-${service.id}`} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

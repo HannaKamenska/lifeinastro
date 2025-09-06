@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Star, Mail, MessageCircle, Bot, Globe, Heart } from "lucide-react";
+import LegalContent from "./LegalContent";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -167,18 +168,28 @@ const Footer = () => {
           </div>
           
           <div className="flex gap-6">
-            <a 
-              href="#privacy" 
+            <button 
+              onClick={() => {
+                const privacySection = document.getElementById('legal-privacy');
+                if (privacySection) {
+                  privacySection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="hover:text-primary-foreground transition-colors focus-ring rounded-md"
             >
               Политика конфиденциальности
-            </a>
-            <a 
-              href="#terms" 
+            </button>
+            <button 
+              onClick={() => {
+                const termsSection = document.getElementById('legal-terms');
+                if (termsSection) {
+                  termsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="hover:text-primary-foreground transition-colors focus-ring rounded-md"
             >
               Условия использования
-            </a>
+            </button>
           </div>
         </div>
 
@@ -188,6 +199,16 @@ const Footer = () => {
             Этот сайт разработан с соблюдением стандартов доступности WCAG 2.1 AA 
             для всех пользователей, включая людей с ограниченными возможностями.
           </p>
+        </div>
+
+        {/* Legal Content Sections */}
+        <div className="mt-16 space-y-6">
+          <div id="legal-privacy">
+            <LegalContent type="privacy" />
+          </div>
+          <div id="legal-terms">
+            <LegalContent type="terms" />
+          </div>
         </div>
       </div>
     </footer>
