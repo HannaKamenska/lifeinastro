@@ -84,17 +84,75 @@ const Services = () => {
       description: "Уточнение времени рождения",
       price: "€110",
       duration: "120 минут",
-      category: "Индивидуальные",
       features: ["Анализ событий жизни", "Точное время рождения", "Коррекция карты"],
     },
+    // Added new service offerings for energy, health, career, finance and relationships
+    {
+      id: 9,
+      icon: Star,
+      title: "Энергетический баланс",
+      description: "Определение и гармонизация вашей личной энергетики",
+      price: "€130",
+      duration: "90 минут",
+      features: [
+        "Анализ энергетического потенциала",
+        "Индивидуальные рекомендации",
+        "Восстановление баланса",
+      ],
+    },
+    {
+      id: 10,
+      icon: Heart,
+      title: "Астрологическое здоровье",
+      description: "Интерпретация карты здоровья и укрепление иммунитета",
+      price: "€140",
+      duration: "80 минут",
+      features: [
+        "Анализ уязвимых зон",
+        "Профилактические советы",
+        "Оптимальные периоды отдыха",
+      ],
+    },
+    {
+      id: 11,
+      icon: Briefcase,
+      title: "Карьерная профориентация",
+      description: "Помощь в выборе профессии с учётом вашего потенциала",
+      price: "€120",
+      duration: "90 минут",
+      features: [
+        "Анализ талантов",
+        "Перспективные направления",
+        "План развития",
+      ],
+    },
+    {
+      id: 12,
+      icon: TrendingUp,
+      title: "Финансовая астрология",
+      description: "Оптимизация финансового потока и увеличение доходов",
+      price: "€150",
+      duration: "100 минут",
+      features: [
+        "Анализ финансовых транзитов",
+        "Выбор благоприятных периодов",
+        "Инвестиционные рекомендации",
+      ],
+    },
+    {
+      id: 13,
+      icon: Users,
+      title: "Астрология отношений",
+      description: "Разбор динамики и гармонизация личных отношений",
+      price: "€110",
+      duration: "75 минут",
+      features: [
+        "Анализ личных и социальных планет",
+        "Советы по гармонии",
+        "Определение потенциала пары",
+      ],
+    },
   ];
-
-  const standardServices = services.filter(
-    (service) => service.category === "Стандартные"
-  );
-  const individualServices = services.filter(
-    (service) => service.category === "Индивидуальные"
-  );
 
   // Состояние для отслеживания открытой секции деталей
   const [activeService, setActiveService] = useState<number | null>(null);
@@ -129,42 +187,41 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Standard Services (без заголовка) */}
-        <div className="mb-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {standardServices.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <Card
-                  key={service.id}
-                  className="hover-lift shadow-soft border-border/50 bg-card/80 backdrop-blur-sm"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 mx-auto mb-4 gradient-mystical rounded-full flex items-center justify-center">
-                      <IconComponent
-                        className="text-accent-foreground"
-                        size={28}
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <CardTitle className="text-xl font-semibold text-card-foreground">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
+        {/* Список всех услуг без разделения на категории */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <Card
+                key={service.id}
+                className="hover-lift shadow-soft border-border/50 bg-card/80 backdrop-blur-sm"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 gradient-mystical rounded-full flex items-center justify-center">
+                    <IconComponent
+                      className="text-accent-foreground"
+                      size={28}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-card-foreground">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
 
-                  <CardContent className="pt-0">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-2xl font-bold text-primary">
-                        {service.price}
-                      </span>
-                      <Badge variant="secondary" className="text-sm">
-                        {service.duration}
-                      </Badge>
-                    </div>
+                <CardContent className="pt-0">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-2xl font-bold text-primary">
+                      {service.price}
+                    </span>
+                    <Badge variant="secondary" className="text-sm">
+                      {service.duration}
+                    </Badge>
+                  </div>
 
                     <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                       {service.features.map((feature, idx) => (
@@ -196,7 +253,7 @@ const Services = () => {
                         variant="outline"
                         className="w-full border-primary/30 text-primary hover:bg-primary/10 focus-ring"
                         onClick={() => {
-                          // Если эта услуга уже открыта, закрываем её; иначе открываем
+                          // При повторном клике сворачиваем/раскрываем выбранный блок
                           setActiveService((prev) =>
                             prev === service.id ? null : service.id
                           );
@@ -219,117 +276,22 @@ const Services = () => {
               );
             })}
           </div>
-        </div>
 
-        {/* Individual Services (без заголовка) */}
-        <div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {individualServices.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <Card
-                  key={service.id}
-                  className="hover-lift shadow-soft border-accent/30 bg-gradient-to-br from-card/90 to-accent/5 backdrop-blur-sm"
-                  style={{ animationDelay: `${(index + 5) * 0.1}s` }}
-                >
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 mx-auto mb-4 gradient-golden rounded-full flex items-center justify-center">
-                      <IconComponent
-                        className="text-foreground"
-                        size={28}
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <CardTitle className="text-xl font-semibold text-card-foreground">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-
-                    <CardContent className="pt-0">
-                      <div className="flex justify-between items-center mb-4">
-                        <span className="text-2xl font-bold text-accent-deep">
-                          {service.price}
-                        </span>
-                        <Badge
-                          variant="outline"
-                          className="border-accent text-accent-deep"
-                        >
-                          {service.duration}
-                        </Badge>
-                      </div>
-
-                      <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <div
-                              className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"
-                              aria-hidden="true"
-                            ></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-
-                      <div className="space-y-2">
-                        <Button
-                          className="w-full gradient-mystical border-0 text-accent-foreground hover:shadow-mystical transition-smooth focus-ring"
-                          asChild
-                        >
-                          <a
-                            href="https://forms.gle/uXqtAvbuG2G3pk5z7"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Записаться на ${service.title}`}
-                          >
-                            Записаться
-                          </a>
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="w-full border-accent/30 text-accent-deep hover:bg-accent/10 focus-ring"
-                          onClick={() => {
-                            setActiveService((prev) =>
-                              prev === service.id ? null : service.id
-                            );
-                            const detailsSection = document.getElementById(
-                              `service-details-${service.id}`
-                            );
-                            if (detailsSection) {
-                              detailsSection.scrollIntoView({
-                                behavior: "smooth",
-                              });
-                            }
-                          }}
-                          aria-label={`Подробнее о ${service.title}`}
-                        >
-                          Подробнее
-                        </Button>
-                      </div>
-                    </CardContent>
-                </Card>
-              );
-            })}
+          {/* Секции с подробностями выбранных услуг */}
+          <div className="space-y-8 mt-16">
+            {services.map((service) => (
+              <div key={`details-${service.id}`}>
+                {activeService === service.id && (
+                  <div id={`service-details-${service.id}`}>
+                    <ServiceDetails serviceId={`service-${service.id}`} />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
+      </section>
+    );
+  };
 
-        {/* Service Details Sections */}
-        <div className="space-y-8 mt-16">
-          {services.map((service) => (
-            <div key={`details-${service.id}`}>
-              {activeService === service.id && (
-                <div id={`service-details-${service.id}`}>
-                  <ServiceDetails serviceId={`service-${service.id}`} />
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Services;
+  export default Services;
