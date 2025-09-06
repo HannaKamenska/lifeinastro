@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Footer from "@/components/Footer";
+import StarryEffect from "@/components/StarryEffect";
 
 const Index = () => {
   useEffect(() => {
@@ -108,5 +109,14 @@ const Index = () => {
     </div>
   );
 };
+
+export default function HomePage() {
+  return (
+    <>
+      {/* другие компоненты страницы */}
+      <StarryEffect />
+    </>
+  );
+}
 
 export default Index;
