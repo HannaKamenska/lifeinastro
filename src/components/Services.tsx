@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar } from "lucide-react";
+import { Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 import ServiceDetails from "./ServiceDetails";
 
@@ -86,7 +86,7 @@ const Services = () => {
       duration: "30 минут",
       features: ["Анализ событий жизни", "Точное время рождения", "Коррекция времени"],
     },
-    // Added new service offerings for energy, health, career, finance and relationships
+    // Дополнительные индивидуальные услуги
     {
       id: 9,
       icon: Star,
@@ -152,6 +152,19 @@ const Services = () => {
         "Описание потенциальных партнеров",
       ],
     },
+    {
+      id: 14,
+      icon: Moon,
+      title: "Анализ снов",
+      description: "Астрологический разбор сновидений и их символов",
+      price: "€80",
+      duration: "90 минут",
+      features: [
+        "Толкование символов сна через астрологию",
+        "Связь сюжетов и образов снов с реальной жизнью",
+        "Практические рекомендации для осознанной работы со снами",
+      ],
+    },
   ];
 
   // Состояние для отслеживания открытой секции деталей
@@ -169,17 +182,10 @@ const Services = () => {
   }, [activeService]);
 
   return (
-    <section
-      id="services"
-      className="py-20 bg-background"
-      aria-labelledby="services-heading"
-    >
+    <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2
-            id="services-heading"
-            className="text-4xl md:text-5xl font-bold mb-6 text-foreground"
-          >
+          <h2 id="services-heading" className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Астрологические консультации
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -198,7 +204,11 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 gradient-mystical rounded-full flex items-center justify-center">
+                  <div
+                    className={`w-16 h-16 mx-auto mb-4 gradient-mystical rounded-full flex items-center justify-center ${
+                      service.title === "Анализ снов" ? "animate-pulse" : ""
+                    }`}
+                  >
                     <IconComponent
                       className="text-accent-foreground"
                       size={28}
@@ -223,75 +233,71 @@ const Services = () => {
                     </Badge>
                   </div>
 
-                    <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <div
-                            className="w-2 h-2 bg-gold rounded-full mr-3 flex-shrink-0"
-                            aria-hidden="true"
-                          ></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <div
+                          className="w-2 h-2 bg-gold rounded-full mr-3 flex-shrink-0"
+                          aria-hidden="true"
+                        ></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
-                    <div className="space-y-2">
-                      <Button
-                        className="w-full gradient-primary border-0 text-primary-foreground hover:shadow-glow transition-smooth focus-ring"
-                        asChild
+                  <div className="space-y-2">
+                    <Button
+                      className="w-full gradient-primary border-0 text-primary-foreground hover:shadow-glow transition-smooth focus-ring"
+                      asChild
+                    >
+                      <a
+                        href="https://forms.gle/uXqtAvbuG2G3pk5z7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Записаться на ${service.title}`}
                       >
-                        <a
-                          href="https://forms.gle/uXqtAvbuG2G3pk5z7"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`Записаться на ${service.title}`}
-                        >
-                          Записаться
-                        </a>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="w-full border-primary/30 text-primary hover:bg-primary/10 focus-ring"
-                        onClick={() => {
-                          // При повторном клике сворачиваем/раскрываем выбранный блок
-                          setActiveService((prev) =>
-                            prev === service.id ? null : service.id
-                          );
-                          const detailsSection = document.getElementById(
-                            `service-details-${service.id}`
-                          );
-                          if (detailsSection) {
-                            detailsSection.scrollIntoView({
-                              behavior: "smooth",
-                            });
-                          }
-                        }}
-                        aria-label={`Подробнее о ${service.title}`}
-                      >
-                        Подробнее
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-
-          {/* Секции с подробностями выбранных услуг */}
-          <div className="space-y-8 mt-16">
-            {services.map((service) => (
-              <div key={`details-${service.id}`}>
-                {activeService === service.id && (
-                  <div id={`service-details-${service.id}`}>
-                    <ServiceDetails serviceId={`service-${service.id}`} />
+                        Записаться
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="w-full border-primary/30 text-primary hover:bg-primary/10 focus-ring"
+                      onClick={() => {
+                        // При повторном клике сворачиваем/раскрываем выбранный блок
+                        setActiveService((prev) => (prev === service.id ? null : service.id));
+                        const detailsSection = document.getElementById(`service-details-${service.id}`);
+                        if (detailsSection) {
+                          detailsSection.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                        }
+                      }}
+                      aria-label={`Подробнее о ${service.title}`}
+                    >
+                      Подробнее
+                    </Button>
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
-      </section>
-    );
-  };
 
-  export default Services;
+        {/* Секции с подробностями выбранных услуг */}
+        <div className="space-y-8 mt-16">
+          {services.map((service) => (
+            <div key={`details-${service.id}`}>
+              {activeService === service.id && (
+                <div id={`service-details-${service.id}`}>
+                  <ServiceDetails serviceId={`service-${service.id}`} />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
