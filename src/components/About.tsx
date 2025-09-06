@@ -7,8 +7,8 @@ import consultationSetup from "@/assets/consultation-setup.jpg";
 const About = () => {
   const qualities = [
     { icon: Heart, text: "Эмпатия и поддержка" },
-    { icon: Star, text: "15+ лет опыта" },
-    { icon: Users, text: "500+ консультаций" },
+    { icon: Star, text: "4+ лет опыта" },
+    { icon: Users, text: "Консультации и менторство" },
     { icon: BookOpen, text: "Непрерывное обучение" }
   ];
 
@@ -21,37 +21,59 @@ const About = () => {
               Обо мне
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Астролог и консультант по трансформации, помогающий людям найти свой путь
+              Астролог и консультант по трансформации, помогающий людям найти свой путь, справиться с кризисом
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <div className="space-y-6 animate-fade-in-up">
-              <Card className="p-6 shadow-soft bg-card/80 backdrop-blur-sm border-border/50">
-                <CardContent className="p-0">
-                  <div className="prose prose-lg text-card-foreground">
-                    <p className="text-lg leading-relaxed mb-4">
-                      Привет! Меня зовут <strong className="text-primary">Life in Astro</strong>, и я специализируюсь на 
-                      астрологических консультациях, которые помогают людям понять себя глубже и найти 
-                      свой истинный путь.
-                    </p>
-                    
-                    <p className="text-base text-muted-foreground mb-4">
-                      Моя миссия — помочь вам пройти через кризисы и трансформации с пониманием 
-                      и поддержкой. Я использую астрологию как инструмент самопознания, объединяя 
-                      её с элементами психологии для максимально эффективной работы.
-                    </p>
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Content */}
+        <div className="space-y-6 animate-fade-in-up">
+          <Card className="p-6 shadow-soft bg-card/80 backdrop-blur-sm border-border/50">
+            <CardContent className="p-0">
+              <div className="prose prose-lg text-card-foreground">
+                <p className="text-lg leading-relaxed mb-4">
+                  Привет! Я — Анна, создательница проекта «Life in Astro». Я исследую,
+                  как древние знания и современные технологии помогают людям понять себя
+                  глубже и найти свой истинный путь.
+                </p>
 
-                    <div className="bg-accent/10 p-4 rounded-lg border-l-4 border-accent">
-                      <p className="text-muted-foreground italic">
-                        "Каждая натальная карта — это уникальная карта души, которая раскрывает 
-                        ваши таланты, вызовы и предназначение. Моя задача — помочь вам прочитать эту карту."
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                <p className="text-base text-muted-foreground mb-4">
+                  Моя миссия — сопровождать вас в моменте выбора и трансформации.
+                  Я совмещаю астрологию, философию, психологию, финансовый опыт и
+                  духовные практики, создавая авторский подход к анализу личности и бизнеса.
+                </p>
+
+                <p className="text-base text-muted-foreground mb-4">
+                  Почему астрология? Карту рождения я рассматриваю как уникальный код,
+                  в котором скрыты ваши таланты, задачи и возможности. Этот код я дополняю
+                  персональными стратегиями и современными инструментами, чтобы вы могли
+                  принимать уверенные решения.
+                </p>
+
+                <p className="text-base text-muted-foreground mb-4">
+                  Давайте создадим ваш путь вместе! Подписывайтесь на мой {" "}
+                  <a
+                    href="https://t.me/lifeinastro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-primary"
+                  >
+                    Telegram‑канал
+                  </a>
+                  и записывайтесь на консультацию — я рядом, чтобы помочь вам раскрыть 
+                  потенциал и жить в резонансе со своей истинной природой.
+                </p>
+
+                <div className="bg-accent/10 p-4 rounded-lg border-l-4 border-accent">
+                  <p className="text-muted-foreground italic">
+                    «Каждая натальная карта — это уникальная карта души, которая
+                    раскрывает ваши таланты, вызовы и предназначение. Моя задача —
+                    помочь вам прочитать эту карту».
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
               {/* Qualities Grid */}
               <div className="grid grid-cols-2 gap-4">
@@ -80,13 +102,16 @@ const About = () => {
                   </h3>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="outline" className="border-accent text-accent-deep">
-                      Классическая астрология
+                      Западная астрология
                     </Badge>
                     <Badge variant="outline" className="border-primary text-primary">
-                      Психологическое консультирование
+                      Астропсихологическое консультирование
                     </Badge>
                     <Badge variant="outline" className="border-gold text-foreground">
                       Хорарная астрология
+                    </Badge>
+                    <Badge variant="outline" className="border-accent text-accent-deep">
+                      Прогностика
                     </Badge>
                   </div>
                   <p className="text-sm text-muted-foreground">
