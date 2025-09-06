@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar } from "lucide-react";
 import ServiceDetails from "./ServiceDetails";
+import { useState, useEffect } from 'react';
 
 const Services = () => {
   const services = [
@@ -90,6 +91,7 @@ const Services = () => {
 
   const standardServices = services.filter(service => service.category === "Стандартные");
   const individualServices = services.filter(service => service.category === "Индивидуальные");
+  const [activeService, setActiveService] = useState<number | null>(null);
 
   return (
     <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">
