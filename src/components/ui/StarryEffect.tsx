@@ -17,11 +17,11 @@ const StarryEffect = () => {
 
       setStars((prev) => [...prev, { id, x, y }]);
 
-      // удаляем звёздочку через 2 секунды (длительность анимации)
+      // удаляем звёздочку через 3 секунды (длительность анимации)
       setTimeout(() => {
         setStars((prev) => prev.filter((star) => star.id !== id));
-      }, 2000);
-    }, 5000); // каждые 5 секунд
+      }, 3000);
+    }, 7000); // каждые 7 секунд
 
     return () => clearInterval(interval);
   }, []);
