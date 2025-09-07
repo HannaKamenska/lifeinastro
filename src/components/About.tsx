@@ -58,9 +58,9 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="underline text-primary"
                   >
-                    Telegram‑канал
+                    Telegram‑канал 
                   </a>
-                  и записывайтесь на консультацию — я рядом, чтобы помочь вам раскрыть
+                   и записывайтесь на консультацию — я рядом, чтобы помочь вам раскрыть
                   потенциал и жить в резонансе со своей истинной природой.
                 </p>
 
@@ -112,6 +112,15 @@ const About = () => {
                     </Badge>
                     <Badge variant="outline" className="border-accent text-accent-deep">
                       Прогностика
+                    </Badge>
+                    <Badge variant="outline" className="border-gold text-foreground">
+                      Астрология Рода
+                    </Badge>
+                    <Badge variant="outline" className="border-primary text-primary">
+                      Психология для астрологов
+                    </Badge>
+                    <Badge variant="outline" className="border-accent text-accent-deep">
+                      Астрология сновидений
                     </Badge>
                   </div>
                   <p className="text-sm text-muted-foreground">
