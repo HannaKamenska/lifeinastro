@@ -1,14 +1,24 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
-Allow: /
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/public/robots.txt b/public/robots.txt
+index 6018e701fc7dd0317cda9eceea390524322e8a05..0fd1bd64e1d3bfa2812a09bb48167aa0bd2f4512 100644
+--- a/public/robots.txt
++++ b/public/robots.txt
+@@ -1,14 +1,15 @@
+ User-agent: Googlebot
+ Allow: /
+ 
+ User-agent: Bingbot
+ Allow: /
+ 
+ User-agent: Twitterbot
+ Allow: /
+ 
+ User-agent: facebookexternalhit
+ Allow: /
+ 
+ User-agent: *
+ Allow: /
++Sitemap: https://lifeinastro.com/sitemap.xml
+ 
+EOF
+)
