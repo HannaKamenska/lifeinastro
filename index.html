@@ -1,3 +1,4 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/index.html b/index.html
 index 734074875da970d2e6b5e455da74dd99d42df67c..26ec24b6a55f30ff00acc4103628f473d3028d93 100644
 --- a/index.html
@@ -9,75 +10,62 @@ index 734074875da970d2e6b5e455da74dd99d42df67c..26ec24b6a55f30ff00acc4103628f473
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>Индивидуальные астрологические консультации | Астрология и психология трансформации</title>
--    <meta name="description" content="Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию." />
--    <meta name="keywords" content="астрология, астрологические консультации, психология, трансформация, натальная карта, астролог, кризис, самопознание" />
--    <meta name="author" content="Life in Astro" />
--    <img src="/src/assets/hero-background.jpg" />
-+      <meta name="description" content="Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию." />
-+      <meta name="keywords" content="астрология, астрологические консультации, психология, трансформация, натальная карта, астролог, кризис, самопознание, гороскоп, саморазвитие, личностный рост, консультация астролога онлайн" />
-+      <meta name="author" content="Life in Astro" />
-+      <link rel="canonical" href="https://lifeinastro.com/" />
-+      <link rel="alternate" hreflang="ru" href="https://lifeinastro.com/" />
-+      <link rel="alternate" hreflang="x-default" href="https://lifeinastro.com/" />
-     
+      <meta name="description" content="Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию." />
+      <meta name="keywords" content="астрология, астрологические консультации, психология, трансформация, натальная карта, астролог, кризис, самопознание, гороскоп, саморазвитие, личностный рост, консультация астролога онлайн" />
+      <meta name="author" content="Life in Astro" />
+      <link rel="canonical" href="https://lifeinastro.com/" />
+      <link rel="alternate" hreflang="ru" href="https://lifeinastro.com/" />
+      <link rel="alternate" hreflang="x-default" href="https://lifeinastro.com/" />
+
      <!-- Open Graph / Facebook -->
--    <meta property="og:type" content="website" />
--    <img src="/src/assets/hero-background.jpg" />
--    <meta property="og:title" content="Индивидуальные астрологические консультации | Трансформация через астрологию" />
--    <meta property="og:description" content="Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах и поиск жизненного пути." />
--    <meta property="og:image" content="/og-image.jpg" />
-+      <meta property="og:type" content="website" />
-+      <meta property="og:title" content="Индивидуальные астрологические консультации | Трансформация через астрологию" />
-+      <meta property="og:description" content="Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах и поиск жизненного пути." />
-+      <meta property="og:image" content="/og-image.jpg" />
-+      <meta property="og:url" content="https://lifeinastro.com/" />
-+      <meta property="og:locale" content="ru_RU" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Индивидуальные астрологические консультации | Трансформация через астрологию" />
+   <meta property="og:description" content="Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах и поиск жизненного пути." />
+   <meta property="og:image" content="/og-image.jpg" />
+   <meta property="og:url" content="https://lifeinastro.com/" />
+   <meta property="og:locale" content="ru_RU" />
  
      <!-- Twitter -->
--    <meta property="twitter:card" content="summary_large_image" />
--    <img src="/src/assets/hero-background.jpg" />
--    <meta property="twitter:title" content="Индивидуальные астрологические консультации" />
--    <meta property="twitter:description" content="Профессиональные астрологические консультации для глубинного понимания себя." />
--    <meta property="twitter:image" content="/og-image.jpg" />
-+      <meta property="twitter:card" content="summary_large_image" />
-+      <meta property="twitter:title" content="Индивидуальные астрологические консультации" />
-+      <meta property="twitter:description" content="Профессиональные астрологические консультации для глубинного понимания себя." />
-+      <meta property="twitter:image" content="/og-image.jpg" />
-+
-+      <!-- Structured Data -->
-+      <script type="application/ld+json">
-+        {
-+          "@context": "https://schema.org",
-+          "@graph": [
-+            {
-+              "@type": "Organization",
-+              "@id": "https://lifeinastro.com/#organization",
-+              "name": "Life in Astro",
-+              "url": "https://lifeinastro.com/",
-+              "logo": "https://lifeinastro.com/og-image.jpg"
-+            },
-+            {
-+              "@type": "WebSite",
-+              "@id": "https://lifeinastro.com/#website",
-+              "url": "https://lifeinastro.com/",
-+              "name": "Life in Astro",
-+              "publisher": { "@id": "https://lifeinastro.com/#organization" },
-+              "inLanguage": "ru"
-+            },
-+            {
-+              "@type": "Article",
-+              "headline": "Индивидуальные астрологические консультации | Астрология и психология трансформации",
-+              "description": "Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию.",
-+              "author": {"@type": "Person", "name": "Life in Astro"},
-+              "publisher": {"@id": "https://lifeinastro.com/#organization"},
-+              "mainEntityOfPage": {"@type": "WebPage", "@id": "https://lifeinastro.com/"},
-+              "image": "https://lifeinastro.com/og-image.jpg",
-+              "inLanguage": "ru"
-+            }
-+          ]
-+        }
-+      </script>
-     
+   <meta property="twitter:card" content="summary_large_image" />
+   <img src="/src/assets/hero-background.jpg" />
+   <meta property="twitter:title" content="Индивидуальные астрологические консультации" />
+   <meta property="twitter:description" content="Профессиональные астрологические консультации для глубинного понимания себя." />
+   <meta property="twitter:image" content="/og-image.jpg" />
+
+   <!-- Structured Data -->
+   <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://lifeinastro.com/#organization",
+              "name": "Life in Astro",
+              "url": "https://lifeinastro.com/",
+              "logo": "https://lifeinastro.com/og-image.jpg"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://lifeinastro.com/#website",
+              "url": "https://lifeinastro.com/",
+              "name": "Life in Astro",
+              "publisher": { "@id": "https://lifeinastro.com/#organization" },
+              "inLanguage": "ru"
+            },
+            {
+              "@type": "Article",
+              "headline": "Индивидуальные астрологические консультации | Астрология и психология трансформации",
+              "description": "Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию.",
+              "author": {"@type": "Person", "name": "Life in Astro"},
+              "publisher": {"@id": "https://lifeinastro.com/#organization"},
+              "mainEntityOfPage": {"@type": "WebPage", "@id": "https://lifeinastro.com/"},
+              "image": "https://lifeinastro.com/og-image.jpg",
+              "inLanguage": "ru"
+            }
+          ]
+        }
+      </script>
+
      <!-- Additional SEO -->
      <meta name="robots" content="index, follow" />
      <meta name="language" content="Russian" />
@@ -92,3 +80,6 @@ index 734074875da970d2e6b5e455da74dd99d42df67c..26ec24b6a55f30ff00acc4103628f473
      <script type="module" src="/src/main.tsx"></script>
    </body>
  </html>
+ 
+EOF
+)

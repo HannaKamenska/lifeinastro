@@ -8,7 +8,6 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Footer from "@/components/Footer";
-import StarryEffect from "@/components/StarryEffect";
 
 const Index = () => {
   useEffect(() => {
@@ -85,8 +84,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Skip to content link - always first focusable element */}
-      <a 
-        href="#main-content" 
+      <a
+        href="#main-content"
         className="skip-link"
         tabIndex={1}
       >
@@ -109,14 +108,5 @@ const Index = () => {
     </div>
   );
 };
-
-export default function HomePage() {
-  return (
-    <>
-      {/* другие компоненты страницы */}
-      <StarryEffect />
-    </>
-  );
-}
 
 export default Index;

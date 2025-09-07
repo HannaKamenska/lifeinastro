@@ -1,18 +1,9 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a//dev/null b/public/sitemap.xml
-index 0000000000000000000000000000000000000000..4b1458a9c7b17fe2a5a5fe3d1ec73289ed3ef7ee 100644
---- a//dev/null
-+++ b/public/sitemap.xml
-@@ -0,0 +1,9 @@
-+<?xml version="1.0" encoding="UTF-8"?>
-+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-+  <url>
-+    <loc>https://lifeinastro.com/</loc>
-+    <lastmod>2025-09-07</lastmod>
-+    <changefreq>weekly</changefreq>
-+    <priority>1.0</priority>
-+  </url>
-+</urlset>
- 
-EOF
-)
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lifeinastro.com/</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
