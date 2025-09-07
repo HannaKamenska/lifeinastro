@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
+import React from "react";
 
 interface Star {
   id: number;
   x: number; // координата X в процентах
   y: number; // координата Y в процентах
 }
+
+const StarryEffect: React.FC = () => {
+  return null;
+};
+
+export default StarryEffect;
 
 const StarryEffect = () => {
   const [stars, setStars] = useState<Star[]>([]);
