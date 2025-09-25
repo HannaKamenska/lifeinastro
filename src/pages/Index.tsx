@@ -26,7 +26,7 @@ const Index = () => {
       },
       "areaServed": {
         "@type": "Place",
-        "name": "Европейский Союз"
+        "name": "весь мир (онлайн консультации)"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -39,7 +39,7 @@ const Index = () => {
               "name": "Натальная карта",
               "description": "Полный анализ личности через призму астрологии"
             },
-            "price": "80",
+            "price": "Бесплатно/по желанию - донат",
             "priceCurrency": "EUR"
           },
           {
@@ -49,7 +49,7 @@ const Index = () => {
               "name": "Синастрия",
               "description": "Совместимость и динамика отношений"
             },
-            "price": "100",
+            "price": "Бесплатно/по желанию - донат",
             "priceCurrency": "EUR"
           }
         ]
