@@ -12,7 +12,7 @@ const Services = () => {
       icon: Star,
       title: "Натальная карта",
       description: "Полный анализ личности через призму астрологии",
-      price: "€80",
+      price: "Бесплатно (donation welcome)"
       duration: "90 минут",
       category: "Стандартные",
       features: ["Анализ характера", "Таланты и способности", "Жизненные задачи"]
@@ -22,7 +22,7 @@ const Services = () => {
       icon: Heart,
       title: "Синастрия",
       description: "Совместимость и динамика отношений",
-      price: "€100",
+      price: "Бесплатно (donation welcome)",
       duration: "75 минут",
       category: "Стандартные",
       features: ["Совместимость партнеров", "Кармические связи", "Развитие отношений"]
@@ -32,7 +32,7 @@ const Services = () => {
       icon: TrendingUp,
       title: "Прогноз",
       description: "Астрологический прогноз на год",
-      price: "€90",
+      price: "Бесплатно (donation welcome)",
       duration: "60 минут",
       category: "Стандартные",
       features: ["Важные периоды", "Возможности роста", "Предупреждения"]
@@ -42,7 +42,7 @@ const Services = () => {
       icon: Clock,
       title: "Хорарная астрология",
       description: "Ответы на конкретные вопросы",
-      price: "€60",
+      price: "Бесплатно (donation welcome)",
       duration: "45 минут",
       category: "Стандартные",
       features: ["Быстрые ответы", "Конкретные решения", "Timing событий"]
@@ -52,7 +52,7 @@ const Services = () => {
       icon: Users,
       title: "Детская карта",
       description: "Понимание ребенка через астрологию",
-      price: "€70",
+      price: "Бесплатно (donation welcome)",
       duration: "60 минут",
       category: "Стандартные",
       features: ["Характер ребенка", "Таланты", "Подходы в воспитании"]
@@ -62,7 +62,7 @@ const Services = () => {
       icon: Briefcase,
       title: "Астростратегия для бизнеса",
       description: "Астрологическая поддержка бизнес-решений",
-      price: "€150",
+      price: "Бесплатно (donation welcome)",
       duration: "120 минут",
       category: "Индивидуальные",
       features: ["Анализ команды", "Timing запусков", "Стратегическое планирование"]
@@ -72,7 +72,7 @@ const Services = () => {
       icon: Search,
       title: "Астрология бренда",
       description: "Создание аутентичного образа бренда",
-      price: "€120",
+      price: "Бесплатно (donation welcome)",
       duration: "90 минут",
       category: "Индивидуальные",
       features: ["Архетип бренда", "Целевая аудитория", "Стратегия коммуникации"]
@@ -82,7 +82,7 @@ const Services = () => {
       icon: Calendar,
       title: "Ректификация",
       description: "Уточнение времени рождения",
-      price: "€110",
+      price: "Бесплатно (donation welcome)",
       duration: "120 минут",
       category: "Индивидуальные",
       features: ["Анализ событий жизни", "Точное время рождения", "Коррекция карты"]
