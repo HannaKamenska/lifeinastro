@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
+    <section className="relative min-h-screen flex w-full items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -23,6 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Star className="absolute top-20 left-20 text-gold animate-float" size={24} aria-hidden="true" />
         <Moon className="absolute top-40 right-32 text-accent animate-float" size={28} style={{ animationDelay: '1s' }} aria-hidden="true" />
+        <Star className="absolute bottom-40 right-10 text-gold animate-float" size={14} aria-hidden="true" />
         <Heart className="absolute bottom-40 left-32 text-primary-glow animate-float" size={20} style={{ animationDelay: '2s' }} aria-hidden="true" />
       </div>
 
@@ -35,7 +36,7 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-1xl mx-auto leading-relaxed">
             Индивидуальные консультации для глубинного понимания себя, 
             поиска смысла и преодоления кризисов
           </p>
