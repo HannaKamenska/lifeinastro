@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+       'astro-sky': "url('/assets/bg-sky.jpg')", // путь к твоему фону  },
+      },
       fontFamily: {
         'playfair': ['Playfair Display', 'serif'],
         'inter': ['Inter', 'sans-serif'],

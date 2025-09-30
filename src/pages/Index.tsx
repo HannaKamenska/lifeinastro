@@ -81,8 +81,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Skip to content link - always first focusable element */}
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Фоновый слой */}
+      <div className="bg-astro-sky bg-cover bg-center fixed inset-0 -z-10" />
       <a 
         href="#main-content" 
         className="skip-link"
