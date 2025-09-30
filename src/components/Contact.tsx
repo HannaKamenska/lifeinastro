@@ -18,7 +18,7 @@ const Contact = () => {
       description: "Удобная запись на консультацию",
       value: "Google Forms",
       action: "https://forms.gle/uXqtAvbuG2G3pk5z7",
-      actionText: "Записаться"
+      actionText: "Записаться на консультацию"
     },
     {
       icon: MessageCircle,
@@ -196,7 +196,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Задать вопрос боту
+                    Задать вопрос через чат-бот
                   </a>
                 </Button>
               </div>

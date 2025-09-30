@@ -255,7 +255,7 @@ const ServiceDetails = ({ serviceId }: ServiceDetailsProps) => {
               href="https://forms.gle/uXqtAvbuG2G3pk5z7"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Записаться на ${service.title}`}
+              aria-label={`Записаться на консультацию ${service.title}`}
             >
               Записаться на консультацию
             </a>

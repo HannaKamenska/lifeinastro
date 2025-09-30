@@ -20,12 +20,12 @@ const Services = () => {
     {
       id: 2,
       icon: Heart,
-      title: "Синастрия",
-      description: "Совместимость и динамика отношений",
+      title: "Здоровье",
+      description: "Интерпретация карты здоровья и укрепление иммунитета",
       price: "Бесплатно (donation welcome)",
-      duration: "75 минут",
+      duration: "90 минут",
       category: "Стандартные",
-      features: ["Совместимость партнеров", "Кармические связи", "Развитие отношений"]
+      features: ["Анализ уязвимых зон. Выявление рисков", "Профилактические советы, рекомендации", "Выявление причинно-следственных связей заболеваний"]
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const Services = () => {
       price: "Бесплатно (donation welcome)",
       duration: "60 минут",
       category: "Стандартные",
-      features: ["Важные периоды", "Возможности роста", "Предупреждения"]
+      features: ["Важные периоды", "Возможности роста", "Предупреждения","Риски"]
     },
     {
       id: 4,
@@ -65,7 +65,7 @@ const Services = () => {
       price: "Бесплатно (donation welcome)",
       duration: "120 минут",
       category: "Индивидуальные",
-      features: ["Анализ команды", "Timing запусков", "Стратегическое планирование"]
+      features: ["Анализ бизнеса", "Ребрендинг", "Стратегическое планирование"]
     },
     {
       id: 7,
@@ -75,7 +75,7 @@ const Services = () => {
       price: "Бесплатно (donation welcome)",
       duration: "90 минут",
       category: "Индивидуальные",
-      features: ["Архетип бренда", "Целевая аудитория", "Стратегия коммуникации"]
+      features: ["Архетип бренда", "Миссия и ценности", "Целевая аудитория", "Стратегия коммуникации"]
     },
     {
       id: 8,
@@ -83,9 +83,9 @@ const Services = () => {
       title: "Ректификация",
       description: "Уточнение времени рождения",
       price: "Бесплатно (donation welcome)",
-      duration: "120 минут",
+      duration: "30 минут",
       category: "Индивидуальные",
-      features: ["Анализ событий жизни", "Точное время рождения", "Коррекция карты"]
+      features: ["Анализ событий жизни", "Точное время рождения", "Коррекция времени"]
     }
   ];
 
@@ -157,9 +157,9 @@ const Services = () => {
                           href="https://forms.gle/uXqtAvbuG2G3pk5z7"
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label={`Записаться на ${service.title}`}
+                          aria-label={`Записаться на консультацию${service.title}`}
                         >
-                          Записаться
+                          Записаться на консультацию
                         </a>
                       </Button>
                       <Button 
@@ -235,9 +235,9 @@ const Services = () => {
                           href="https://forms.gle/uXqtAvbuG2G3pk5z7"
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label={`Записаться на ${service.title}`}
+                          aria-label={`Записаться на консультацию${service.title}`}
                         >
-                          Записаться
+                          Записаться на консультацию
                         </a>
                       </Button>
                       <Button 

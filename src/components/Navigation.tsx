@@ -101,7 +101,7 @@ const Navigation = () => {
                 rel="noopener noreferrer"
                 aria-label="Записаться на консультацию через Google форму"
               >
-                Записаться
+                Записаться на консультацию
               </a>
             </Button>
 

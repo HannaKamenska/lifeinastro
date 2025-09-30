@@ -65,7 +65,7 @@ const Footer = () => {
             
             <div className="flex items-center gap-2 text-sm text-primary-foreground/60">
               <Globe className="w-4 h-4" aria-hidden="true" />
-              <span>Консультации для клиентов по всему миру онлайн</span>
+              <span>Консультации по всему миру онлайн</span>
             </div>
           </div>
 
