@@ -3,15 +3,19 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
-    host: "::",
-    port: 8080,
+    host: "::", // позволяет доступ с любого IPv6-адреса
+    port: 8080, // можешь изменить на 3000, если хочешь
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"), // позволяет использовать "@/components/..." вместо длинных путей
     },
   },
-}));
+  build: {
+    outDir: "dist", // папка для финальной сборки
+    emptyOutDir: true, // очищает папку перед новой сборкой
+  },
+});
