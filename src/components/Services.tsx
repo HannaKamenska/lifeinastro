@@ -12,7 +12,7 @@ const Services = () => {
       icon: Star,
       title: "Натальная карта",
       description: "Полный анализ личности через призму астрологии",
-      price: "Бесплатно (donation welcome)"
+      price: "Бесплатно (donation welcome)",
       duration: "90 минут",
       category: "Стандартные",
       features: ["Анализ характера", "Таланты и способности", "Жизненные задачи"]
