@@ -4,7 +4,7 @@ A creative, responsive web project built with modern technologies — blending m
 
 ## 🔗 Project URL
 
-Live preview: [https://hanna.lifeinastro.site](https://hanna.lifeinastro.site)  
+Live preview: https://lifeinastro.com/ 
 *(Replace with your actual domain or GitHub Pages link)*
 
 ---

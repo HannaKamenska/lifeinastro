@@ -17,7 +17,6 @@ const Index = () => {
       "@type": "ProfessionalService",
       "name": "Life in Astro - Астрологические консультации",
       "description": "Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию.",
-      "url": "https://98f9be51-2a57-4ec1-93ff-81c3b389db6a.lovableproject.com",
       "serviceType": "Астрологические консультации",
       "provider": {
         "@type": "Person",
@@ -26,7 +25,7 @@ const Index = () => {
       },
       "areaServed": {
         "@type": "Place",
-        "name": "Европейский Союз"
+        "name": "по всему миру (онлайн)"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -39,7 +38,7 @@ const Index = () => {
               "name": "Натальная карта",
               "description": "Полный анализ личности через призму астрологии"
             },
-            "price": "80",
+            "price": "Бесплатно (donation welcome)",
             "priceCurrency": "EUR"
           },
           {
@@ -49,7 +48,7 @@ const Index = () => {
               "name": "Синастрия",
               "description": "Совместимость и динамика отношений"
             },
-            "price": "100",
+            "price": "Бесплатно (donation welcome)",
             "priceCurrency": "EUR"
           }
         ]
