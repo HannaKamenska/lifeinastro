@@ -3,7 +3,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar, Flame, Euro, Euro, BaggageClaim, Moon } from "lucide-react";
+import { ChevronDown, Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar, Flame, Euro, BaggageClaim, Moon } from "lucide-react";
 
 interface ServiceDetailsProps {
   serviceId: string;
