@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar } from "lucide-react";
+import { Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar, Flame, Euro, BaggageClaim, Moon } from "lucide-react";
 import ServiceDetails from "./ServiceDetails";
 import { useState, useEffect } from 'react';
 
@@ -59,18 +59,28 @@ const Services = () => {
     },
     {
       id: 6,
+      icon: Calendar,
+      title: "Ректификация",
+      description: "Уточнение времени рождения",
+      price: "Бесплатно (donation welcome)",
+      duration: "30 минут",
+      category: "Стандартные",
+      features: ["Анализ событий жизни", "Точное время рождения", "Коррекция времени"]
+    },
+    {
+      id: 7,
       icon: Briefcase,
       title: "Астростратегия для бизнеса",
       description: "Астрологическая поддержка бизнес-решений",
       price: "Бесплатно (donation welcome)",
       duration: "120 минут",
       category: "Индивидуальные",
-      features: ["Анализ бизнеса", "Ребрендинг", "Стратегическое планирование"]
+      features: ["Анализ бизнеса", "Ребрендинг", "Потенциальные клиенты - кто они?","Стратегическое планирование"]
     },
     {
-      id: 7,
+      id: 8,
       icon: Search,
-      title: "Астрология бренда",
+      title: "Построение личного бренда",
       description: "Создание аутентичного образа бренда",
       price: "Бесплатно (donation welcome)",
       duration: "90 минут",
@@ -78,14 +88,44 @@ const Services = () => {
       features: ["Архетип бренда", "Миссия и ценности", "Целевая аудитория", "Стратегия коммуникации"]
     },
     {
-      id: 8,
-      icon: Calendar,
-      title: "Ректификация",
-      description: "Уточнение времени рождения",
+      id: 9,
+      icon: Flame,
+      title: "Энергетический баланс",
+      description: "Определение и гармонизация вашей личной силы и энергии",
       price: "Бесплатно (donation welcome)",
-      duration: "30 минут",
+      duration: "90 минут",
       category: "Индивидуальные",
-      features: ["Анализ событий жизни", "Точное время рождения", "Коррекция времени"]
+      features: ["Подбор дела, спорта, хобби", "Где брать энергию?","Восстановление баланса"]
+    },
+    {
+      id: 10,
+      icon: Briefcase,
+      title: "Карьерная профориентация",
+      description: "Помощь в выборе профессии с учётом вашего потенциала",
+      price: "Бесплатно (donation welcome)",
+      duration: "90 минут",
+      category: "Индивидуальные",
+      features: ["Анализ талантов", "Перспективные направления", "Подбор профессии и дела жизни", "План развития. Стратегия"]
+    },
+    {
+      id: 11,
+      icon: Star,
+      title: "Финансовая астрология",
+      description: "Оптимизация финансового потока и увеличение доходов",
+      price: "Бесплатно (donation welcome)",
+      duration: "90 минут",
+      category: "Индивидуальные",
+      features: ["Анализ финансовых потоков", "Определение источников дохода", "Рекомендации по инвестициям", "Подбор ниш, видов деятельности"]
+    },
+    {
+      id: 12,
+      icon: Moon,
+      title: "Анализ снов",
+      description: "Астрологический разбор сновидений и их символов",
+      price: "Бесплатно (donation welcome)",
+      duration: "90 минут",
+      category: "Индивидуальные",
+      features: ["Толкование символов сна", "Связь сюжетов и образов снов с реальной жизнью и психикой", "Практические рекомендации для осознанной работы со снами"]
     }
   ];
 
