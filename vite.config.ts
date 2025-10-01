@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   server: {
     host: "::", // позволяет доступ с любого IPv6-адреса
-    port: 8080, // можешь изменить на 3000, если хочешь
+    port: 8080, // можешь изменить на 3000
   },
   plugins: [react()],
   resolve: {

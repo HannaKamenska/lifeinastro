@@ -197,6 +197,10 @@
 }
 
 /* Custom Animations */
+@media (prefers-reduced-motion: reduce) {
+  /* отключить анимации */
+}
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
