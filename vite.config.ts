@@ -4,9 +4,11 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/",
+
   server: {
     host: "::", // позволяет доступ с любого IPv6-адреса
-    port: 8080, // можешь изменить на 3000
+    port: 8080, // порт для локального сервера
   },
   plugins: [react()],
   resolve: {
