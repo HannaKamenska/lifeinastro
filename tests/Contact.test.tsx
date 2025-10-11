@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@/test/utils';
+import { render, screen, fireEvent, waitFor } from '@test/utils';
 import Contact from '../Contact';
 
 describe('Contact - Критичный компонент', () => {

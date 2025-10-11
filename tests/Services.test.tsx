@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen, within } from '@/test/utils';
+import { render, screen, within } from '@test/utils';
 import Services from '../Services';
 
 describe('Services - Критичный компонент', () => {
