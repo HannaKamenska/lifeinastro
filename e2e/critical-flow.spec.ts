@@ -24,8 +24,8 @@ test.describe('Критичный пользовательский поток', 
 
     // Проверяем, что на странице есть карточки услуг или их заголовки
     const servicesHeading = page.locator('h2:has-text("услуг"), h3:has-text("услуг")');
-    const serviceCards = page.locator('[role="article"], [data-testid*="service"], [class*="service"]');
-    await expect(servicesHeading.or(serviceCards)).toBeVisible();
+    const serviceCards = page.locator('[role="article"][data-testid="service-card"]');
+    await expect(serviceCards.first()).toBeVisible();
 
     // 3) Переход к разделу "Контакты" / "Контакты и связь"
     const contactLink = page.locator('a:has-text("Контакты"), a:has-text("Контакт")');
@@ -70,18 +70,33 @@ test.describe('Критичный пользовательский поток', 
   });
 
   test('✅ Мобильная навигация работает', async ({ page }) => {
-    await page.setViewportSize({ width: 375, height: 667 }); // iPhone-ish
+  await page.setViewportSize({ width: 375, height: 667 }); // мобильное окно
 
-    // Кнопка меню может иметь разные aria-label
-    const menuButton = page.locator('button[aria-label*="menu" i], button[aria-label*="меню" i], button:has(svg)');
-    await expect(menuButton.first()).toBeVisible();
+  // 1) Ищем кнопку бургер-меню (несколько вариантов селекторов)
+  const burger = page.locator(
+    [
+      'button[aria-label*="menu" i]',
+      'button[aria-label*="меню" i]',
+      'button[aria-label*="navigation" i]',
+      'button[aria-label*="навигац" i]',
+      '[data-testid="mobile-menu-button"]',
+      // если у тебя есть конкретный класс/идентификатор — добавь здесь
+      // 'button[class*="menu"]',
+      // '#mobile-menu-button',
+    ].join(', ')
+  ).filter({ has: page.locator('svg') }).first();
 
-    await menuButton.first().click();
+  // 2) Отфильтруем скрытые (на всякий случай)
+  const visibleBurger = burger.filter({ hasNot: page.locator('[hidden], [aria-hidden="true"]') });
 
-    // Открывшееся навигационное меню: ищем nav или список ссылок
-    const openedMenu = page.locator('nav, [role="navigation"]');
-    await expect(openedMenu.first()).toBeVisible();
-  });
+  // 3) Проверим, что кнопка видима и нажмём её
+  await expect(visibleBurger).toBeVisible();
+  await visibleBurger.click();
+
+  // 4) Проверим, что меню открылось
+  const openedMenu = page.locator('nav, [role="navigation"]');
+  await expect(openedMenu.first()).toBeVisible();
+});
 
   test('✅ Сайт загружается быстро', async ({ page, baseURL }) => {
     const t0 = Date.now();

@@ -17,6 +17,7 @@ export default defineConfig({
   // Глобальные настройки браузера
   use: {
     baseURL: 'http://localhost:8082', // <-- Порт 8082
+    headless: true,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
@@ -32,5 +33,6 @@ export default defineConfig({
     command: 'npm run dev',
     url: 'http://localhost:8082',      // <-- Порт 8082
     reuseExistingServer: !process.env.CI,
+    timeout: 120000,
   },
 });

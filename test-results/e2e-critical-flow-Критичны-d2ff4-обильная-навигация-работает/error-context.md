@@ -1,0 +1,1154 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - link "Перейти к основному содержанию" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - navigation "Основная навигация" [ref=e6]:
+      - generic [ref=e8]:
+        - link "Life in Astro - перейти на главную" [ref=e9] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e11]
+          - text: Life in Astro
+        - button "Открыть меню навигации" [ref=e14] [cursor=pointer]:
+          - img
+    - main [ref=e15]:
+      - region "Трансформация через Астрологию" [ref=e16]:
+        - link "Перейти к основному содержанию" [ref=e19] [cursor=pointer]:
+          - /url: "#main-content"
+        - generic:
+          - img
+          - img
+          - img
+          - img
+        - generic [ref=e21]:
+          - heading "Трансформация через Астрологию" [level=1] [ref=e22]
+          - paragraph [ref=e23]: Индивидуальные консультации для глубинного понимания себя, поиска смысла и преодоления кризисов
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: ✨ Помогу найти ваш путь через астрологию
+            - paragraph [ref=e26]: Для людей, переживающих трансформации и ищущих опору
+          - generic [ref=e27]:
+            - link "Записаться на консультацию" [ref=e28] [cursor=pointer]:
+              - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+            - link "Перейти к услугам" [ref=e29] [cursor=pointer]:
+              - /url: "#services"
+              - text: Узнать больше
+          - paragraph [ref=e30]: Первая консультация включает анализ натальной карты
+      - region "Астрологические консультации" [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - heading "Астрологические консультации" [level=2] [ref=e34]
+            - paragraph [ref=e35]: Выберите подходящий формат работы для решения ваших задач
+          - generic [ref=e36]:
+            - heading "Стандартные консультации" [level=3] [ref=e37]
+            - generic [ref=e38]:
+              - article [ref=e39]:
+                - generic [ref=e40]:
+                  - img [ref=e42]
+                  - heading "Натальная карта" [level=3] [ref=e44]
+                  - paragraph [ref=e45]: Полный анализ личности через призму астрологии
+                - generic [ref=e46]:
+                  - generic [ref=e47]:
+                    - generic [ref=e48]: Бесплатно (donation welcome)
+                    - generic [ref=e49]: 90 минут
+                  - list [ref=e50]:
+                    - listitem [ref=e51]: Анализ характера
+                    - listitem [ref=e53]: Таланты и способности
+                    - listitem [ref=e55]: Жизненные задачи
+                  - generic [ref=e57]:
+                    - link "Записаться на консультацию Натальная карта" [ref=e58] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Натальная карта" [ref=e59] [cursor=pointer]: Подробнее
+              - article [ref=e60]:
+                - generic [ref=e61]:
+                  - img [ref=e63]
+                  - heading "Здоровье" [level=3] [ref=e65]
+                  - paragraph [ref=e66]: Интерпретация карты здоровья и укрепление иммунитета
+                - generic [ref=e67]:
+                  - generic [ref=e68]:
+                    - generic [ref=e69]: Бесплатно (donation welcome)
+                    - generic [ref=e70]: 90 минут
+                  - list [ref=e71]:
+                    - listitem [ref=e72]: Анализ уязвимых зон. Выявление рисков
+                    - listitem [ref=e74]: Профилактические советы, рекомендации
+                    - listitem [ref=e76]: Выявление причинно-следственных связей заболеваний
+                  - generic [ref=e78]:
+                    - link "Записаться на консультацию Здоровье" [ref=e79] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Здоровье" [ref=e80] [cursor=pointer]: Подробнее
+              - article [ref=e81]:
+                - generic [ref=e82]:
+                  - img [ref=e84]
+                  - heading "Прогноз" [level=3] [ref=e87]
+                  - paragraph [ref=e88]: Астрологический прогноз на год
+                - generic [ref=e89]:
+                  - generic [ref=e90]:
+                    - generic [ref=e91]: Бесплатно (donation welcome)
+                    - generic [ref=e92]: 60 минут
+                  - list [ref=e93]:
+                    - listitem [ref=e94]: Важные периоды
+                    - listitem [ref=e96]: Возможности роста
+                    - listitem [ref=e98]: Предупреждения
+                    - listitem [ref=e100]: Риски
+                  - generic [ref=e102]:
+                    - link "Записаться на консультацию Прогноз" [ref=e103] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Прогноз" [ref=e104] [cursor=pointer]: Подробнее
+              - article [ref=e105]:
+                - generic [ref=e106]:
+                  - img [ref=e108]
+                  - heading "Хорарная астрология" [level=3] [ref=e111]
+                  - paragraph [ref=e112]: Ответы на конкретные вопросы
+                - generic [ref=e113]:
+                  - generic [ref=e114]:
+                    - generic [ref=e115]: Бесплатно (donation welcome)
+                    - generic [ref=e116]: 45 минут
+                  - list [ref=e117]:
+                    - listitem [ref=e118]: Быстрые ответы
+                    - listitem [ref=e120]: Конкретные решения
+                    - listitem [ref=e122]: Timing событий
+                  - generic [ref=e124]:
+                    - link "Записаться на консультацию Хорарная астрология" [ref=e125] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Хорарная астрология" [ref=e126] [cursor=pointer]: Подробнее
+              - article [ref=e127]:
+                - generic [ref=e128]:
+                  - img [ref=e130]
+                  - heading "Детская карта" [level=3] [ref=e135]
+                  - paragraph [ref=e136]: Понимание ребенка через астрологию
+                - generic [ref=e137]:
+                  - generic [ref=e138]:
+                    - generic [ref=e139]: Бесплатно (donation welcome)
+                    - generic [ref=e140]: 60 минут
+                  - list [ref=e141]:
+                    - listitem [ref=e142]: Характер ребенка
+                    - listitem [ref=e144]: Таланты
+                    - listitem [ref=e146]: Подходы в воспитании
+                  - generic [ref=e148]:
+                    - link "Записаться на консультацию Детская карта" [ref=e149] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Детская карта" [ref=e150] [cursor=pointer]: Подробнее
+              - article [ref=e151]:
+                - generic [ref=e152]:
+                  - img [ref=e154]
+                  - heading "Ректификация" [level=3] [ref=e156]
+                  - paragraph [ref=e157]: Уточнение времени рождения
+                - generic [ref=e158]:
+                  - generic [ref=e159]:
+                    - generic [ref=e160]: Бесплатно (donation welcome)
+                    - generic [ref=e161]: 30 минут
+                  - list [ref=e162]:
+                    - listitem [ref=e163]: Анализ событий жизни
+                    - listitem [ref=e165]: Точное время рождения
+                    - listitem [ref=e167]: Коррекция времени
+                  - generic [ref=e169]:
+                    - link "Записаться на консультацию Ректификация" [ref=e170] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Ректификация" [ref=e171] [cursor=pointer]: Подробнее
+          - generic [ref=e172]:
+            - heading "Индивидуальные консультации" [level=3] [ref=e173]
+            - generic [ref=e174]:
+              - article [ref=e175]:
+                - generic [ref=e176]:
+                  - img [ref=e178]
+                  - heading "Астростратегия для бизнеса" [level=3] [ref=e181]
+                  - paragraph [ref=e182]: Астрологическая поддержка бизнес-решений
+                - generic [ref=e183]:
+                  - generic [ref=e184]:
+                    - generic [ref=e185]: Бесплатно (donation welcome)
+                    - generic [ref=e186]: 120 минут
+                  - list [ref=e187]:
+                    - listitem [ref=e188]: Анализ бизнеса
+                    - listitem [ref=e190]: Ребрендинг
+                    - listitem [ref=e192]: Потенциальные клиенты - кто они?
+                    - listitem [ref=e194]: Стратегическое планирование
+                  - generic [ref=e196]:
+                    - link "Записаться на консультацию Астростратегия для бизнеса" [ref=e197] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Астростратегия для бизнеса" [ref=e198] [cursor=pointer]: Подробнее
+              - article [ref=e199]:
+                - generic [ref=e200]:
+                  - img [ref=e202]
+                  - heading "Построение личного бренда" [level=3] [ref=e205]
+                  - paragraph [ref=e206]: Создание аутентичного образа бренда
+                - generic [ref=e207]:
+                  - generic [ref=e208]:
+                    - generic [ref=e209]: Бесплатно (donation welcome)
+                    - generic [ref=e210]: 90 минут
+                  - list [ref=e211]:
+                    - listitem [ref=e212]: Архетип бренда
+                    - listitem [ref=e214]: Миссия и ценности
+                    - listitem [ref=e216]: Целевая аудитория
+                    - listitem [ref=e218]: Стратегия коммуникации
+                  - generic [ref=e220]:
+                    - link "Записаться на консультацию Построение личного бренда" [ref=e221] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Построение личного бренда" [ref=e222] [cursor=pointer]: Подробнее
+              - article [ref=e223]:
+                - generic [ref=e224]:
+                  - img [ref=e226]
+                  - heading "Энергетический баланс" [level=3] [ref=e228]
+                  - paragraph [ref=e229]: Определение и гармонизация вашей личной силы и энергии
+                - generic [ref=e230]:
+                  - generic [ref=e231]:
+                    - generic [ref=e232]: Бесплатно (donation welcome)
+                    - generic [ref=e233]: 90 минут
+                  - list [ref=e234]:
+                    - listitem [ref=e235]: Подбор дела, спорта, хобби
+                    - listitem [ref=e237]: Где брать энергию?
+                    - listitem [ref=e239]: Восстановление баланса
+                  - generic [ref=e241]:
+                    - link "Записаться на консультацию Энергетический баланс" [ref=e242] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Энергетический баланс" [ref=e243] [cursor=pointer]: Подробнее
+              - article [ref=e244]:
+                - generic [ref=e245]:
+                  - img [ref=e247]
+                  - heading "Карьерная профориентация" [level=3] [ref=e250]
+                  - paragraph [ref=e251]: Помощь в выборе профессии с учётом вашего потенциала
+                - generic [ref=e252]:
+                  - generic [ref=e253]:
+                    - generic [ref=e254]: Бесплатно (donation welcome)
+                    - generic [ref=e255]: 90 минут
+                  - list [ref=e256]:
+                    - listitem [ref=e257]: Анализ талантов
+                    - listitem [ref=e259]: Перспективные направления
+                    - listitem [ref=e261]: Подбор профессии и дела жизни
+                    - listitem [ref=e263]: План развития. Стратегия
+                  - generic [ref=e265]:
+                    - link "Записаться на консультацию Карьерная профориентация" [ref=e266] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Карьерная профориентация" [ref=e267] [cursor=pointer]: Подробнее
+              - article [ref=e268]:
+                - generic [ref=e269]:
+                  - img [ref=e271]
+                  - heading "Финансовая астрология" [level=3] [ref=e273]
+                  - paragraph [ref=e274]: Оптимизация финансового потока и увеличение доходов
+                - generic [ref=e275]:
+                  - generic [ref=e276]:
+                    - generic [ref=e277]: Бесплатно (donation welcome)
+                    - generic [ref=e278]: 90 минут
+                  - list [ref=e279]:
+                    - listitem [ref=e280]: Анализ финансовых потоков
+                    - listitem [ref=e282]: Определение источников дохода
+                    - listitem [ref=e284]: Рекомендации по инвестициям
+                    - listitem [ref=e286]: Подбор ниш, видов деятельности
+                  - generic [ref=e288]:
+                    - link "Записаться на консультацию Финансовая астрология" [ref=e289] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Финансовая астрология" [ref=e290] [cursor=pointer]: Подробнее
+              - article [ref=e291]:
+                - generic [ref=e292]:
+                  - img [ref=e294]
+                  - heading "Анализ снов" [level=3] [ref=e296]
+                  - paragraph [ref=e297]: Астрологический разбор сновидений и их символов
+                - generic [ref=e298]:
+                  - generic [ref=e299]:
+                    - generic [ref=e300]: Бесплатно (donation welcome)
+                    - generic [ref=e301]: 90 минут
+                  - list [ref=e302]:
+                    - listitem [ref=e303]: Толкование символов сна
+                    - listitem [ref=e305]: Связь сюжетов и образов снов с реальной жизнью и психикой
+                    - listitem [ref=e307]: Практические рекомендации для осознанной работы со снами
+                  - generic [ref=e309]:
+                    - link "Записаться на консультацию Анализ снов" [ref=e310] [cursor=pointer]:
+                      - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                      - text: Записаться на консультацию
+                    - button "Подробнее о Анализ снов" [ref=e311] [cursor=pointer]: Подробнее
+          - generic [ref=e312]:
+            - generic [ref=e314]:
+              - generic [ref=e315]:
+                - img [ref=e317]
+                - heading "Натальная карта" [level=3] [ref=e319]
+                - generic [ref=e320]:
+                  - generic [ref=e321]: Бесплатно (donation welcome)
+                  - generic [ref=e322]: 90 минут
+              - generic [ref=e323]:
+                - paragraph [ref=e324]: Натальная карта - это ваш астрологический 'паспорт', который показывает положение планет в момент рождения. Это глубинный анализ вашей личности, талантов, жизненных задач и потенциала. В ходе консультации мы рассмотрим основные планеты в знаках и домах, аспекты между ними, а также ключевые точки карты.
+                - generic [ref=e325]:
+                  - heading "Что включает консультация:" [level=4] [ref=e326]
+                  - list [ref=e327]:
+                    - listitem [ref=e328]:
+                      - generic [ref=e330]: Анализ Солнца, Луны и Асцендента
+                    - listitem [ref=e331]:
+                      - generic [ref=e333]: Изучение всех планет в знаках и домах
+                    - listitem [ref=e334]:
+                      - generic [ref=e336]: Анализ аспектов между планетами
+                    - listitem [ref=e337]:
+                      - generic [ref=e339]: Определение жизненных задач и талантов
+                    - listitem [ref=e340]:
+                      - generic [ref=e342]: Рекомендации по развитию потенциала
+                    - listitem [ref=e343]:
+                      - generic [ref=e345]: Письменный отчет с ключевыми выводами
+                - generic [ref=e346]:
+                  - heading "Подходит для:" [level=4] [ref=e347]
+                  - list [ref=e348]:
+                    - listitem [ref=e349]:
+                      - generic [ref=e351]: Тех, кто хочет глубже понять себя
+                    - listitem [ref=e352]:
+                      - generic [ref=e354]: Людей, стоящих на пороге важных решений
+                    - listitem [ref=e355]:
+                      - generic [ref=e357]: Желающих найти свое призвание
+                    - listitem [ref=e358]:
+                      - generic [ref=e360]: Тех, кто интересуется астрологией
+                - link "Записаться на консультацию Натальная карта" [ref=e362] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e364]:
+              - generic [ref=e365]:
+                - img [ref=e367]
+                - heading "Здоровье" [level=3] [ref=e369]
+                - generic [ref=e370]:
+                  - generic [ref=e371]: Бесплатно (donation welcome)
+                  - generic [ref=e372]: 90 минут
+              - generic [ref=e373]:
+                - paragraph [ref=e374]: Астрология здоровья помогает понять предрасположенности к определенным заболеваниям, а также выявить сильные и слабые стороны организма. Мы анализируем 6-й дом, положение планет, управителей и аспекты, чтобы дать рекомендации по укреплению здоровья и профилактике заболеваний.
+                - generic [ref=e375]:
+                  - heading "Что включает консультация:" [level=4] [ref=e376]
+                  - list [ref=e377]:
+                    - listitem [ref=e378]:
+                      - generic [ref=e380]: Анализ уязвимых зон. Выявление рисков для здоровья
+                    - listitem [ref=e381]:
+                      - generic [ref=e383]: Определение слабых сторон здоровья
+                    - listitem [ref=e384]:
+                      - generic [ref=e386]: Выявление потенциальных рисков заболеваний
+                    - listitem [ref=e387]:
+                      - generic [ref=e389]: Профилактические советы, рекомендации по укреплению иммунитета
+                    - listitem [ref=e390]:
+                      - generic [ref=e392]: Рекомендации по образу жизни и питанию
+                    - listitem [ref=e393]:
+                      - generic [ref=e395]: Астрологические рекомендации по лечению - какие методы подходят именно вам
+                    - listitem [ref=e396]:
+                      - generic [ref=e398]: Выявление причинно-следственных связей заболеваний
+                - generic [ref=e399]:
+                  - heading "Подходит для:" [level=4] [ref=e400]
+                  - list [ref=e401]:
+                    - listitem [ref=e402]:
+                      - generic [ref=e404]: Тех, кто у кого есть хронические заболевания
+                    - listitem [ref=e405]:
+                      - generic [ref=e407]: Людей в период восстановления после болезни
+                    - listitem [ref=e408]:
+                      - generic [ref=e410]: Желающих разобраться в причинах недомоганий
+                    - listitem [ref=e411]:
+                      - generic [ref=e413]: Тех, кто хочет укрепить здоровье
+                - link "Записаться на консультацию Здоровье" [ref=e415] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e417]:
+              - generic [ref=e418]:
+                - img [ref=e420]
+                - heading "Прогноз" [level=3] [ref=e423]
+                - generic [ref=e424]:
+                  - generic [ref=e425]: Бесплатно (donation welcome)
+                  - generic [ref=e426]: 60 минут
+              - generic [ref=e427]:
+                - paragraph [ref=e428]: Астрологический прогноз помогает понять энергии наступающего периода, важные события и возможности. Мы анализируем транзиты планет к вашей натальной карте, прогрессии и солярную карту. Это позволяет лучше планировать важные дела и использовать благоприятные периоды.
+                - generic [ref=e429]:
+                  - heading "Что включает консультация:" [level=4] [ref=e430]
+                  - list [ref=e431]:
+                    - listitem [ref=e432]:
+                      - generic [ref=e434]: Анализ транзитов на год
+                    - listitem [ref=e435]:
+                      - generic [ref=e437]: Изучение прогрессий
+                    - listitem [ref=e438]:
+                      - generic [ref=e440]: Анализ солярной карты
+                    - listitem [ref=e441]:
+                      - generic [ref=e443]: Определение благоприятных периодов
+                    - listitem [ref=e444]:
+                      - generic [ref=e446]: Предупреждения о сложных временах
+                    - listitem [ref=e447]:
+                      - generic [ref=e449]: Рекомендации по планированию
+                - generic [ref=e450]:
+                  - heading "Подходит для:" [level=4] [ref=e451]
+                  - list [ref=e452]:
+                    - listitem [ref=e453]:
+                      - generic [ref=e455]: Желающих планировать важные события
+                    - listitem [ref=e456]:
+                      - generic [ref=e458]: Людей в переходные периоды жизни
+                    - listitem [ref=e459]:
+                      - generic [ref=e461]: Тех, кто хочет использовать энергии времени
+                    - listitem [ref=e462]:
+                      - generic [ref=e464]: Бизнесменов и предпринимателей
+                - link "Записаться на консультацию Прогноз" [ref=e466] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e468]:
+              - generic [ref=e469]:
+                - img [ref=e471]
+                - heading "Хорарная астрология" [level=3] [ref=e474]
+                - generic [ref=e475]:
+                  - generic [ref=e476]: Бесплатно (donation welcome)
+                  - generic [ref=e477]: 45 минут
+              - generic [ref=e478]:
+                - paragraph [ref=e479]: Хорарная астрология - это метод получения ответов на конкретные вопросы через построение карты на момент задания вопроса. Это быстрый и точный способ получить ясность в сложных ситуациях, принять решение или узнать исход события.
+                - generic [ref=e480]:
+                  - heading "Что включает консультация:" [level=4] [ref=e481]
+                  - list [ref=e482]:
+                    - listitem [ref=e483]:
+                      - generic [ref=e485]: Построение хорарной карты
+                    - listitem [ref=e486]:
+                      - generic [ref=e488]: Анализ сигнификаторов вопроса
+                    - listitem [ref=e489]:
+                      - generic [ref=e491]: Определение исхода ситуации
+                    - listitem [ref=e492]:
+                      - generic [ref=e494]: Timing событий
+                    - listitem [ref=e495]:
+                      - generic [ref=e497]: Рекомендации по действиям
+                    - listitem [ref=e498]:
+                      - generic [ref=e500]: Ответ на конкретный вопрос
+                - generic [ref=e501]:
+                  - heading "Подходит для:" [level=4] [ref=e502]
+                  - list [ref=e503]:
+                    - listitem [ref=e504]:
+                      - generic [ref=e506]: Тех, кто ищет ответ на конкретный вопрос
+                    - listitem [ref=e507]:
+                      - generic [ref=e509]: Желающих получить ясность в сложной ситуации
+                    - listitem [ref=e510]:
+                      - generic [ref=e512]: Людей в сложной жизненной ситуации
+                    - listitem [ref=e513]:
+                      - generic [ref=e515]: Желающих узнать исход дела
+                    - listitem [ref=e516]:
+                      - generic [ref=e518]: Тех, кто нуждается в быстром решении
+                - link "Записаться на консультацию Хорарная астрология" [ref=e520] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e522]:
+              - generic [ref=e523]:
+                - img [ref=e525]
+                - heading "Детская карта" [level=3] [ref=e530]
+                - generic [ref=e531]:
+                  - generic [ref=e532]: Бесплатно (donation welcome)
+                  - generic [ref=e533]: 60 минут
+              - generic [ref=e534]:
+                - paragraph [ref=e535]: Детская астрологическая карта помогает родителям лучше понять характер, потребности и потенциал своего ребенка. Мы анализируем особенности темперамента, способности, склонности и даем рекомендации по воспитанию и развитию.
+                - generic [ref=e536]:
+                  - heading "Что включает консультация:" [level=4] [ref=e537]
+                  - list [ref=e538]:
+                    - listitem [ref=e539]:
+                      - generic [ref=e541]: Анализ характера и темперамента
+                    - listitem [ref=e542]:
+                      - generic [ref=e544]: Выявление талантов и способностей
+                    - listitem [ref=e545]:
+                      - generic [ref=e547]: Рекомендации по воспитанию
+                    - listitem [ref=e548]:
+                      - generic [ref=e550]: Анализ отношений с родителями
+                    - listitem [ref=e551]:
+                      - generic [ref=e553]: Советы по развитию потенциала
+                    - listitem [ref=e554]:
+                      - generic [ref=e556]: Понимание потребностей ребенка
+                - generic [ref=e557]:
+                  - heading "Подходит для:" [level=4] [ref=e558]
+                  - list [ref=e559]:
+                    - listitem [ref=e560]:
+                      - generic [ref=e562]: Родителей, желающих лучше понять ребенка
+                    - listitem [ref=e563]:
+                      - generic [ref=e565]: Семей с трудными подростками
+                    - listitem [ref=e566]:
+                      - generic [ref=e568]: Тех, кто выбирает направление развития
+                    - listitem [ref=e569]:
+                      - generic [ref=e571]: Желающих улучшить отношения с детьми
+                - link "Записаться на консультацию Детская карта" [ref=e573] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e575]:
+              - generic [ref=e576]:
+                - img [ref=e578]
+                - heading "Ректификация" [level=3] [ref=e580]
+                - generic [ref=e581]:
+                  - generic [ref=e582]: Бесплатно (donation welcome)
+                  - generic [ref=e583]: 30 минут
+              - generic [ref=e584]:
+                - paragraph [ref=e585]: Ректификация - это астрологический метод уточнения времени рождения через анализ важных событий жизни. Если вы не знаете точное время рождения или сомневаетесь в нем, эта процедура поможет определить правильное время и построить точную натальную карту.
+                - generic [ref=e586]:
+                  - heading "Что включает консультация:" [level=4] [ref=e587]
+                  - list [ref=e588]:
+                    - listitem [ref=e589]:
+                      - generic [ref=e591]: Сбор данных о важных событиях
+                    - listitem [ref=e592]:
+                      - generic [ref=e594]: Анализ жизненных циклов
+                    - listitem [ref=e595]:
+                      - generic [ref=e597]: Проверка различных вариантов времени
+                    - listitem [ref=e598]:
+                      - generic [ref=e600]: Определение точного времени рождения
+                    - listitem [ref=e601]:
+                      - generic [ref=e603]: Построение скорректированной карты
+                    - listitem [ref=e604]:
+                      - generic [ref=e606]: Объяснение найденных различий
+                - generic [ref=e607]:
+                  - heading "Подходит для:" [level=4] [ref=e608]
+                  - list [ref=e609]:
+                    - listitem [ref=e610]:
+                      - generic [ref=e612]: Тех, кто не знает точное время рождения
+                    - listitem [ref=e613]:
+                      - generic [ref=e615]: Людей с сомнительными данными
+                    - listitem [ref=e616]:
+                      - generic [ref=e618]: Желающих получить точную карту
+                    - listitem [ref=e619]:
+                      - generic [ref=e621]: Тех, кто составляет прогнозы
+                    - listitem [ref=e622]:
+                      - generic [ref=e624]: Тех, кто серьезно изучает астрологию
+                - link "Записаться на консультацию Ректификация" [ref=e626] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e628]:
+              - generic [ref=e629]:
+                - img [ref=e631]
+                - heading "Астростратегия для бизнеса" [level=3] [ref=e634]
+                - generic [ref=e635]:
+                  - generic [ref=e636]: Бесплатно (donation welcome)
+                  - generic [ref=e637]: 120 минут
+              - generic [ref=e638]:
+                - paragraph [ref=e639]: Астростратегия для бизнеса - это применение астрологических знаний для оптимизации бизнес-процессов. Мы анализируем карты учредителей, выбираем благоприятное время для запусков, формируем команды с учетом астрологической совместимости.
+                - generic [ref=e640]:
+                  - heading "Что включает консультация:" [level=4] [ref=e641]
+                  - list [ref=e642]:
+                    - listitem [ref=e643]:
+                      - generic [ref=e645]: Анализ натальных карт учредителей
+                    - listitem [ref=e646]:
+                      - generic [ref=e648]: Астрологический анализ команды
+                    - listitem [ref=e649]:
+                      - generic [ref=e651]: Выбор благоприятного timing
+                    - listitem [ref=e652]:
+                      - generic [ref=e654]: Стратегическое планирование
+                    - listitem [ref=e655]:
+                      - generic [ref=e657]: Миссия и ценности бизнеса
+                    - listitem [ref=e658]:
+                      - generic [ref=e660]: Анализ бизнес-партнеров
+                    - listitem [ref=e661]:
+                      - generic [ref=e663]: Определение сильных и слабых сторон
+                    - listitem [ref=e664]:
+                      - generic [ref=e666]: Рекомендации по развитию
+                - generic [ref=e667]:
+                  - heading "Подходит для:" [level=4] [ref=e668]
+                  - list [ref=e669]:
+                    - listitem [ref=e670]:
+                      - generic [ref=e672]: Предпринимателей и бизнесменов
+                    - listitem [ref=e673]:
+                      - generic [ref=e675]: Руководителей компаний
+                    - listitem [ref=e676]:
+                      - generic [ref=e678]: Тех, кто запускает новые проекты
+                    - listitem [ref=e679]:
+                      - generic [ref=e681]: Желающих оптимизировать бизнес-процессы
+                - link "Записаться на консультацию Астростратегия для бизнеса" [ref=e683] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e685]:
+              - generic [ref=e686]:
+                - img [ref=e688]
+                - heading "Построение личного бренда" [level=3] [ref=e691]
+                - generic [ref=e692]:
+                  - generic [ref=e693]: Бесплатно (donation welcome)
+                  - generic [ref=e694]: 90 минут
+              - generic [ref=e695]:
+                - paragraph [ref=e696]: Астрология бренда помогает создать аутентичный образ, который резонирует с целевой аудиторией. Мы анализируем карту основателя, определяем архетип бренда, выбираем подходящие символы, цвета и стратегии коммуникации.
+                - generic [ref=e697]:
+                  - heading "Что включает консультация:" [level=4] [ref=e698]
+                  - list [ref=e699]:
+                    - listitem [ref=e700]:
+                      - generic [ref=e702]: Определение архетипа бренда
+                    - listitem [ref=e703]:
+                      - generic [ref=e705]: Миссия и ценности бренда
+                    - listitem [ref=e706]:
+                      - generic [ref=e708]: Анализ целевой аудитории
+                    - listitem [ref=e709]:
+                      - generic [ref=e711]: Выбор символов и цветов
+                    - listitem [ref=e712]:
+                      - generic [ref=e714]: Стратегия коммуникации
+                    - listitem [ref=e715]:
+                      - generic [ref=e717]: Timing для запусков
+                    - listitem [ref=e718]:
+                      - generic [ref=e720]: Создание астрологического профиля бренда
+                - generic [ref=e721]:
+                  - heading "Подходит для:" [level=4] [ref=e722]
+                  - list [ref=e723]:
+                    - listitem [ref=e724]:
+                      - generic [ref=e726]: Владельцев брендов и стартапов
+                    - listitem [ref=e727]:
+                      - generic [ref=e729]: Маркетологов и дизайнеров
+                    - listitem [ref=e730]:
+                      - generic [ref=e732]: Инфлюенсеров, ведущих социальные сети
+                    - listitem [ref=e733]:
+                      - generic [ref=e735]: Тех, кто создает личный бренд
+                    - listitem [ref=e736]:
+                      - generic [ref=e738]: Компаний, желающих выделиться
+                - link "Записаться на консультацию Построение личного бренда" [ref=e740] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e742]:
+              - generic [ref=e743]:
+                - img [ref=e745]
+                - heading "Энергетический баланс" [level=3] [ref=e747]
+                - generic [ref=e748]:
+                  - generic [ref=e749]: Бесплатно (donation welcome)
+                  - generic [ref=e750]: 90 минут
+              - generic [ref=e751]:
+                - paragraph [ref=e752]: Энергетический баланс - это процесс определения и гармонизации вашей личной силы и энергии с помощью астрологических методов. Мы анализируем вашу натальную карту, выявляем блоки и дисбалансы, а также предлагаем рекомендации по их устранению.
+                - generic [ref=e753]:
+                  - heading "Что включает консультация:" [level=4] [ref=e754]
+                  - list [ref=e755]:
+                    - listitem [ref=e756]:
+                      - generic [ref=e758]: Подбор дела, которое приносит радость и энергию
+                    - listitem [ref=e759]:
+                      - generic [ref=e761]: Подбор спорта и физической активности
+                    - listitem [ref=e762]:
+                      - generic [ref=e764]: Подбор хобби и творческих занятий, куда направить энергию
+                    - listitem [ref=e765]:
+                      - generic [ref=e767]: Восстановление энергетического баланса
+                    - listitem [ref=e768]:
+                      - generic [ref=e770]: Индивидуальные рекомендации по образу жизни
+                - generic [ref=e771]:
+                  - heading "Подходит для:" [level=4] [ref=e772]
+                  - list [ref=e773]:
+                    - listitem [ref=e774]:
+                      - generic [ref=e776]: Тех, кто не чувствует энергии и жизненных сил
+                    - listitem [ref=e777]:
+                      - generic [ref=e779]: Людей с хронической усталостью
+                    - listitem [ref=e780]:
+                      - generic [ref=e782]: Желающих найти свое дело и призвание
+                    - listitem [ref=e783]:
+                      - generic [ref=e785]: Тех, кто хочет восстановить баланс в жизни
+                    - listitem [ref=e786]:
+                      - generic [ref=e788]: Людей, ищущих гармонию и внутренний покой
+                - link "Записаться на консультацию Энергетический баланс" [ref=e790] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e792]:
+              - generic [ref=e793]:
+                - img [ref=e795]
+                - heading "Карьерная профориентация" [level=3] [ref=e798]
+                - generic [ref=e799]:
+                  - generic [ref=e800]: Бесплатно (donation welcome)
+                  - generic [ref=e801]: 90 минут
+              - generic [ref=e802]:
+                - paragraph [ref=e803]: Карьерная профориентация - это процесс выбора профессии с учётом вашего потенциала, талантов и склонностей, выявленных через астрологический анализ. Мы помогаем определить наиболее подходящие направления для развития вашей карьеры.
+                - generic [ref=e804]:
+                  - heading "Что включает консультация:" [level=4] [ref=e805]
+                  - list [ref=e806]:
+                    - listitem [ref=e807]:
+                      - generic [ref=e809]: Подбор дела, которое приносит радость и энергию
+                    - listitem [ref=e810]:
+                      - generic [ref=e812]: Анализ талантов и склонностей
+                    - listitem [ref=e813]:
+                      - generic [ref=e815]: Определение подходящих профессий
+                    - listitem [ref=e816]:
+                      - generic [ref=e818]: Рекомендации по развитию карьеры
+                    - listitem [ref=e819]:
+                      - generic [ref=e821]: Советы по обучению и повышению квалификации
+                    - listitem [ref=e822]:
+                      - generic [ref=e824]: Индивидуальные рекомендации по карьерному росту
+                - generic [ref=e825]:
+                  - heading "Подходит для:" [level=4] [ref=e826]
+                  - list [ref=e827]:
+                    - listitem [ref=e828]:
+                      - generic [ref=e830]: Тех, кто ищет своё призвание
+                    - listitem [ref=e831]:
+                      - generic [ref=e833]: Людей в поиске работы или смене профессии
+                    - listitem [ref=e834]:
+                      - generic [ref=e836]: Желающих найти свое дело и призвание
+                    - listitem [ref=e837]:
+                      - generic [ref=e839]: Тех, кто хочет развиваться в карьере
+                    - listitem [ref=e840]:
+                      - generic [ref=e842]: Людей, стоящих на пороге важных решений
+                - link "Записаться на консультацию Карьерная профориентация" [ref=e844] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e846]:
+              - generic [ref=e847]:
+                - img [ref=e849]
+                - heading "Финансовая астрология" [level=3] [ref=e851]
+                - generic [ref=e852]:
+                  - generic [ref=e853]: Бесплатно (donation welcome)
+                  - generic [ref=e854]: 90 минут
+              - generic [ref=e855]:
+                - paragraph [ref=e856]: Финансовая астрология - это процесс анализа финансовых потоков и выявления возможностей для увеличения доходов с помощью астрологических методов. Мы помогаем определить наиболее подходящие стратегии для оптимизации вашего финансового состояния.
+                - generic [ref=e857]:
+                  - heading "Что включает консультация:" [level=4] [ref=e858]
+                  - list [ref=e859]:
+                    - listitem [ref=e860]:
+                      - generic [ref=e862]: Подбор дела, которое приносит финансовую стабильность
+                    - listitem [ref=e863]:
+                      - generic [ref=e865]: Определение источников дохода
+                    - listitem [ref=e866]:
+                      - generic [ref=e868]: Рекомендации по инвестициям, страхованию, вкладам и сбережениям
+                    - listitem [ref=e869]:
+                      - generic [ref=e871]: Советы по увеличению доходов
+                    - listitem [ref=e872]:
+                      - generic [ref=e874]: Стратегии финансового планирования
+                    - listitem [ref=e875]:
+                      - generic [ref=e877]: Пути выхода из долгов и накоплений
+                    - listitem [ref=e878]:
+                      - generic [ref=e880]: Рекомендации трат и экономии
+                    - listitem [ref=e881]:
+                      - generic [ref=e883]: Индивидуальные рекомендации по финансовому росту
+                - generic [ref=e884]:
+                  - heading "Подходит для:" [level=4] [ref=e885]
+                  - list [ref=e886]:
+                    - listitem [ref=e887]:
+                      - generic [ref=e889]: Тех, кто ищет пути увеличения дохода
+                    - listitem [ref=e890]:
+                      - generic [ref=e892]: Людей в поиске новых источников заработка
+                    - listitem [ref=e893]:
+                      - generic [ref=e895]: Желающих оптимизировать расходы, закрыть долги
+                    - listitem [ref=e896]:
+                      - generic [ref=e898]: Тех, кто хочет улучшить свое финансовое положение
+                    - listitem [ref=e899]:
+                      - generic [ref=e901]: Выйти из долгов и накопить капитал
+                - link "Записаться на консультацию Финансовая астрология" [ref=e903] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e905]:
+              - generic [ref=e906]:
+                - img [ref=e908]
+                - heading "Анализ снов" [level=3] [ref=e910]
+                - generic [ref=e911]:
+                  - generic [ref=e912]: Бесплатно (donation welcome)
+                  - generic [ref=e913]: 90 минут
+              - generic [ref=e914]:
+                - paragraph [ref=e915]: Анализ снов - это процесс исследования символики и значений сновидений с помощью астрологических методов и архетипов. Мы помогаем понять послания подсознания и использовать их для личного роста и развития.
+                - generic [ref=e916]:
+                  - heading "Что включает консультация:" [level=4] [ref=e917]
+                  - list [ref=e918]:
+                    - listitem [ref=e919]:
+                      - generic [ref=e921]: Толкование символов сна
+                    - listitem [ref=e922]:
+                      - generic [ref=e924]: Связь сюжетов и образов снов с реальной жизнью и психикой
+                    - listitem [ref=e925]:
+                      - generic [ref=e927]: Практические рекомендации для осознанной работы со снами
+                    - listitem [ref=e928]:
+                      - generic [ref=e930]: Астрологические архетипы в снах
+                    - listitem [ref=e931]:
+                      - generic [ref=e933]: Понимание посланий подсознания
+                    - listitem [ref=e934]:
+                      - generic [ref=e936]: Индивидуальные рекомендации по работе со снами
+                - generic [ref=e937]:
+                  - heading "Подходит для:" [level=4] [ref=e938]
+                  - list [ref=e939]:
+                    - listitem [ref=e940]:
+                      - generic [ref=e942]: Тех, кто видит кошмары во снах
+                    - listitem [ref=e943]:
+                      - generic [ref=e945]: Людей с яркими и запоминающимися снами
+                    - listitem [ref=e946]:
+                      - generic [ref=e948]: Тем, у кого сны повторяются
+                    - listitem [ref=e949]:
+                      - generic [ref=e951]: Тех, кто хочет улучшить качество сна
+                    - listitem [ref=e952]:
+                      - generic [ref=e954]: Выйти из порочного круга плохих снов
+                - link "Записаться на консультацию Анализ снов" [ref=e956] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+      - 'region "Стихия твоей Луны: ключ к себе" [ref=e957]':
+        - generic [ref=e958]:
+          - generic [ref=e959]:
+            - 'heading "Стихия твоей Луны: ключ к себе" [level=2] [ref=e960]'
+            - paragraph [ref=e961]: Пройдите короткий тест и узнайте больше о своем эмоциональном мире
+          - generic [ref=e962]:
+            - generic [ref=e963]:
+              - generic [ref=e965]: Вопрос 1 из 3
+              - heading "Что для вас наиболее важно в жизни?" [level=3] [ref=e970]
+            - generic [ref=e971]:
+              - radiogroup [ref=e972]:
+                - generic [ref=e973]:
+                  - radio "Стабильность и безопасность" [ref=e974] [cursor=pointer]
+                  - generic [ref=e975] [cursor=pointer]: Стабильность и безопасность
+                - generic [ref=e976]:
+                  - radio "Глубокие эмоции и связи" [ref=e977] [cursor=pointer]
+                  - generic [ref=e978] [cursor=pointer]: Глубокие эмоции и связи
+                - generic [ref=e979]:
+                  - radio "Свобода и новые идеи" [ref=e980] [cursor=pointer]
+                  - generic [ref=e981] [cursor=pointer]: Свобода и новые идеи
+                - generic [ref=e982]:
+                  - radio "Действие и лидерство" [ref=e983] [cursor=pointer]
+                  - generic [ref=e984] [cursor=pointer]: Действие и лидерство
+              - button "Следующий вопрос" [disabled]
+      - region "Обо мне" [ref=e985]:
+        - generic [ref=e987]:
+          - generic [ref=e988]:
+            - heading "Обо мне" [level=2] [ref=e989]
+            - paragraph [ref=e990]: Астролог и консультант по трансформации, помогающий людям найти свой путь, справиться с кризисомами и раскрыть потенциал через астрологию
+          - generic [ref=e991]:
+            - generic [ref=e992]:
+              - generic [ref=e995]:
+                - paragraph [ref=e996]:
+                  - text: Привет! Я — Анна, создательница проекта
+                  - strong [ref=e997]: Life in Astro
+                  - text: . Я исследую, как древние знания и современные технологии помогают людям понять себя глубже и найти свой истинный путь.
+                - paragraph [ref=e998]: Моя миссия — сопровождать вас в моменте выбора и трансформации. Я совмещаю астрологию, философию, психологию, финансовый опыт и духовные практики, создавая авторский подход к анализу личности и бизнеса.
+                - paragraph [ref=e999]: Почему астрология? Карту рождения я рассматриваю как уникальный код, в котором скрыты ваши таланты, задачи и возможности. Э тот код я дополняю персональными стратегиями и современными инструментами, чтобы вы могли принимать уверенные решения.
+                - paragraph [ref=e1000]: Давайте создадим ваш путь вместе! Подписывайтесь на мой Telegram‑канал и записывайтесь на консультацию — я рядом, чтобы помочь вам раскрыть потенциал и жить в резонансе со своей истинной природой.
+                - paragraph [ref=e1002]: "\"Каждая натальная карта — это уникальная карта души, которая раскрывает ваши таланты, вызовы и предназначение. Моя задача — помочь вам прочитать эту карту.\""
+              - generic [ref=e1003]:
+                - generic [ref=e1004]:
+                  - img [ref=e1006]
+                  - generic [ref=e1008]: Эмпатия и поддержка
+                - generic [ref=e1009]:
+                  - img [ref=e1011]
+                  - generic [ref=e1013]: 4+ лет опыта
+                - generic [ref=e1014]:
+                  - img [ref=e1016]
+                  - generic [ref=e1021]: Консультации и менторство
+                - generic [ref=e1022]:
+                  - img [ref=e1024]
+                  - generic [ref=e1026]: Непрерывное обучение
+              - generic [ref=e1028]:
+                - heading "Образование и подход" [level=3] [ref=e1029]
+                - generic [ref=e1030]:
+                  - generic [ref=e1031]: Западная астрология
+                  - generic [ref=e1032]: Астропсихологическое консультирование
+                  - generic [ref=e1033]: Хорарная астрология
+                  - generic [ref=e1034]: Прогностика
+                  - generic [ref=e1035]: Астрология Рода
+                  - generic [ref=e1036]: Психология для астрологов
+                  - generic [ref=e1037]: Астрология сновидений
+                - paragraph [ref=e1038]: Сочетаю традиционные астрологические методы с современными психологическими подходами для создания целостной картины личности и жизненного пути.
+            - generic [ref=e1039]:
+              - img "Life in Astro - профессиональный астролог-консультант с многолетним опытом в астрологии и психологии" [ref=e1042]
+              - generic [ref=e1044]:
+                - img "Профессиональная астрологическая консультация с натальными картами и мистическими атрибутами" [ref=e1046]
+                - generic [ref=e1048]:
+                  - img [ref=e1049]
+                  - paragraph [ref=e1054]: Индивидуальный подход
+      - region "Отзывы клиентов" [ref=e1055]:
+        - generic [ref=e1056]:
+          - generic [ref=e1057]:
+            - heading "Отзывы клиентов" [level=2] [ref=e1058]
+            - paragraph [ref=e1059]: Истории трансформации и открытий через астрологию
+          - generic [ref=e1060]:
+            - generic [ref=e1061]:
+              - img [ref=e1063]
+              - generic [ref=e1066]:
+                - generic "Оценка 5 из 5 звезд" [ref=e1067]:
+                  - img [ref=e1068]
+                  - img [ref=e1070]
+                  - img [ref=e1072]
+                  - img [ref=e1074]
+                  - img [ref=e1076]
+                - blockquote [ref=e1078]: "\"Консультация помогла мне понять причины моих повторяющихся сложностей в отношениях. Теперь я знаю, как работать с этими паттернами. Очень благодарна за такой глубокий анализ!\""
+                - generic [ref=e1080]: Индивидуальная консультация. Натальная карта
+                - generic [ref=e1083]:
+                  - generic [ref=e1084]: Анна М.
+                  - generic [ref=e1085]: Вюрцбург, Германия
+            - generic [ref=e1087]:
+              - img [ref=e1089]
+              - generic [ref=e1092]:
+                - generic "Оценка 5 из 5 звезд" [ref=e1093]:
+                  - img [ref=e1094]
+                  - img [ref=e1096]
+                  - img [ref=e1098]
+                  - img [ref=e1100]
+                  - img [ref=e1102]
+                - blockquote [ref=e1104]: "\"После развода чувствовала себя потерянной. Астрологическая консультация дала мне понимание и направление для нового этапа жизни. Рекомендую всем, кто переживает сложный период.\""
+                - generic [ref=e1106]: Индивидуальная консультация. Натальная карта
+                - generic [ref=e1107]:
+                  - generic [ref=e1109]: Ю
+                  - generic [ref=e1110]:
+                    - generic [ref=e1111]: Юлия
+                    - generic [ref=e1112]: Харьков, Украина
+            - generic [ref=e1114]:
+              - img [ref=e1116]
+              - generic [ref=e1119]:
+                - generic "Оценка 5 из 5 звезд" [ref=e1120]:
+                  - img [ref=e1121]
+                  - img [ref=e1123]
+                  - img [ref=e1125]
+                  - img [ref=e1127]
+                  - img [ref=e1129]
+                - blockquote [ref=e1131]: "\"Удивительно точный анализ! Впечатлил прогноз на год — многие события произошли, а рекомендации помогли справиться с трудностями. Это помогло мне подготовиться и использовать возможности.\""
+                - generic [ref=e1133]: Прогноз на год
+                - generic [ref=e1136]:
+                  - generic [ref=e1137]: Елена
+                  - generic [ref=e1138]: Киев, Украина
+            - generic [ref=e1140]:
+              - img [ref=e1142]
+              - generic [ref=e1145]:
+                - generic "Оценка 4 из 5 звезд" [ref=e1146]:
+                  - img [ref=e1147]
+                  - img [ref=e1149]
+                  - img [ref=e1151]
+                  - img [ref=e1153]
+                - blockquote [ref=e1155]: "\"Астростратегия для бизнеса превзошла все ожидания. Помогла выбрать правильное время для запуска проекта и понять динамику команды. Спасибо!\""
+                - generic [ref=e1157]: Астростратегия для бизнеса
+                - generic [ref=e1158]:
+                  - generic [ref=e1160]: Д
+                  - generic [ref=e1161]:
+                    - generic [ref=e1162]: Дмитрий
+                    - generic [ref=e1163]: Киев, Украина
+          - generic [ref=e1166]:
+            - heading "Готовы начать свою трансформацию?" [level=3] [ref=e1167]
+            - paragraph [ref=e1168]: Присоединяйтесь к сотням людей, которые уже нашли свой путь через астрологию
+            - link "Записаться на консультацию" [ref=e1169] [cursor=pointer]:
+              - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+      - region "Контакты и связь" [ref=e1170]:
+        - generic [ref=e1171]:
+          - generic [ref=e1172]:
+            - heading "Контакты и связь" [level=2] [ref=e1173]
+            - paragraph [ref=e1174]: Выберите удобный способ связи для записи на консультацию или получения информации
+          - generic [ref=e1175]:
+            - generic [ref=e1176]:
+              - generic [ref=e1177]:
+                - img [ref=e1179]
+                - heading "Email" [level=3] [ref=e1182]
+                - paragraph [ref=e1183]: Прямая связь для вопросов
+              - generic [ref=e1184]:
+                - generic [ref=e1185]: lifeinastro.tg@gmail.com
+                - link "Написать письмо - Email" [ref=e1186] [cursor=pointer]:
+                  - /url: mailto:lifeinastro.tg@gmail.com
+                  - text: Написать письмо
+            - generic [ref=e1187]:
+              - generic [ref=e1188]:
+                - img [ref=e1190]
+                - heading "Форма записи" [level=3] [ref=e1192]
+                - paragraph [ref=e1193]: Удобная запись на консультацию
+              - generic [ref=e1194]:
+                - generic [ref=e1195]: Google Forms
+                - link "Записаться на консультацию - Форма записи" [ref=e1196] [cursor=pointer]:
+                  - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+                  - text: Записаться на консультацию
+            - generic [ref=e1197]:
+              - generic [ref=e1198]:
+                - img [ref=e1200]
+                - heading "Telegram канал" [level=3] [ref=e1202]
+                - paragraph [ref=e1203]: Пространство астрологии и самопознания
+              - generic [ref=e1204]:
+                - generic [ref=e1205]: "@lifeinastro"
+                - link "Подписаться - Telegram канал" [ref=e1206] [cursor=pointer]:
+                  - /url: https://t.me/lifeinastro
+                  - text: Подписаться
+            - generic [ref=e1207]:
+              - generic [ref=e1208]:
+                - img [ref=e1210]
+                - heading "Астробот" [level=3] [ref=e1213]
+                - paragraph [ref=e1214]: Ответы на вопросы и помощь с записью
+              - generic [ref=e1215]:
+                - generic [ref=e1216]: "@lifeinastro_bot"
+                - link "Начать диалог - Астробот" [ref=e1217] [cursor=pointer]:
+                  - /url: https://t.me/lifeinastro_bot
+                  - text: Начать диалог
+          - generic [ref=e1218]:
+            - heading "Дополнительные астро-помощники" [level=3] [ref=e1219]
+            - generic [ref=e1223]:
+              - img [ref=e1225]
+              - generic [ref=e1228]:
+                - heading "Астробот Мечты" [level=4] [ref=e1229]
+                - paragraph [ref=e1230]: ✨Узнай, как реализовать свою мечту с помощью астрологии🪄
+                - generic [ref=e1231]:
+                  - generic [ref=e1232]: "@AstroSNai_bot"
+                  - link "Исполнить мечту" [ref=e1233] [cursor=pointer]:
+                    - /url: https://t.me/AstroSNai_bot
+          - generic [ref=e1236]:
+            - heading "Готовы к трансформации?" [level=3] [ref=e1237]
+            - paragraph [ref=e1238]: Начните своё путешествие к глубокому пониманию себя уже сегодня. Запишитесь на персональную астрологическую консультацию.
+            - generic [ref=e1239]:
+              - link "Записаться на консультацию" [ref=e1240] [cursor=pointer]:
+                - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+              - link "Задать вопрос через чат-бот" [ref=e1241] [cursor=pointer]:
+                - /url: https://t.me/lifeinastro_bot
+      - region "Блог и статьи" [ref=e1242]:
+        - generic [ref=e1243]:
+          - generic [ref=e1244]:
+            - heading "Блог и статьи" [level=2] [ref=e1245]
+            - paragraph [ref=e1246]: Полезная информация о астрологии, самопознании и личностном росте
+          - generic [ref=e1250]:
+            - img "Коридор затмений - что важно знать" [ref=e1252]
+            - generic [ref=e1253]:
+              - generic [ref=e1254]:
+                - generic [ref=e1255]: Рекомендуем
+                - generic [ref=e1256]: Астрология
+              - heading "Коридор затмений - что важно знать" [level=3] [ref=e1257]
+              - paragraph [ref=e1258]: Затмения — это мощные астрологические события, которые приносят кардинальные изменения в нашу жизнь. Узнайте, как правильно проживать эти периоды.
+              - generic [ref=e1259]:
+                - generic [ref=e1260]:
+                  - img [ref=e1261]
+                  - generic [ref=e1263]: 02 сентября 2025
+                - generic [ref=e1264]:
+                  - img [ref=e1265]
+                  - generic [ref=e1268]: 5 мин
+              - button "Читать статью" [ref=e1269] [cursor=pointer]:
+                - text: Читать статью
+                - img
+          - generic [ref=e1270]:
+            - generic [ref=e1272]:
+              - 'img "Ретроградный Меркурий: мифы и реальность" [ref=e1274]'
+              - generic [ref=e1275]:
+                - generic [ref=e1277]: Планеты
+                - 'heading "Ретроградный Меркурий: мифы и реальность" [level=3] [ref=e1278]'
+              - generic [ref=e1279]:
+                - paragraph [ref=e1280]: Развенчиваем популярные мифы о ретроградном Меркурии и рассказываем, как использовать этот период для своей пользы.
+                - generic [ref=e1281]:
+                  - generic [ref=e1282]:
+                    - img [ref=e1283]
+                    - generic [ref=e1285]: 8 июля 2025
+                  - generic [ref=e1286]:
+                    - img [ref=e1287]
+                    - generic [ref=e1290]: 7 мин
+                - button "Читать" [ref=e1291] [cursor=pointer]:
+                  - text: Читать
+                  - img
+            - generic [ref=e1293]:
+              - img "Лунные циклы и эмоциональное здоровье" [ref=e1295]
+              - generic [ref=e1296]:
+                - generic [ref=e1298]: Психология
+                - heading "Лунные циклы и эмоциональное здоровье" [level=3] [ref=e1299]
+              - generic [ref=e1300]:
+                - paragraph [ref=e1301]: Как фазы Луны влияют на наше эмоциональное состояние и как использовать эти знания в повседневной жизни.
+                - generic [ref=e1302]:
+                  - generic [ref=e1303]:
+                    - img [ref=e1304]
+                    - generic [ref=e1306]: 3 июня 2025
+                  - generic [ref=e1307]:
+                    - img [ref=e1308]
+                    - generic [ref=e1311]: 6 мин
+                - button "Читать" [ref=e1312] [cursor=pointer]:
+                  - text: Читать
+                  - img
+            - generic [ref=e1314]:
+              - 'img "Транзиты Сатурна: время важных решений" [ref=e1316]'
+              - generic [ref=e1317]:
+                - generic [ref=e1319]: Транзиты
+                - 'heading "Транзиты Сатурна: время важных решений" [level=3] [ref=e1320]'
+              - generic [ref=e1321]:
+                - paragraph [ref=e1322]: Сатурн приносит в нашу жизнь структуру и дисциплину. Изучаем, как работать с энергией этой планеты конструктивно.
+                - generic [ref=e1323]:
+                  - generic [ref=e1324]:
+                    - img [ref=e1325]
+                    - generic [ref=e1327]: 25 апреля 202
+                  - generic [ref=e1328]:
+                    - img [ref=e1329]
+                    - generic [ref=e1332]: 8 мин
+                - button "Читать" [ref=e1333] [cursor=pointer]:
+                  - text: Читать
+                  - img
+            - generic [ref=e1335]:
+              - 'img "Астрология и карьера: найти свое призвание" [ref=e1337]'
+              - generic [ref=e1338]:
+                - generic [ref=e1340]: Карьера
+                - 'heading "Астрология и карьера: найти свое призвание" [level=3] [ref=e1341]'
+              - generic [ref=e1342]:
+                - paragraph [ref=e1343]: Как натальная карта может помочь в выборе профессии и понимании своих профессиональных талантов.
+                - generic [ref=e1344]:
+                  - generic [ref=e1345]:
+                    - img [ref=e1346]
+                    - generic [ref=e1348]: 18 марта 2025
+                  - generic [ref=e1349]:
+                    - img [ref=e1350]
+                    - generic [ref=e1353]: 10 мин
+                - button "Читать" [ref=e1354] [cursor=pointer]:
+                  - text: Читать
+                  - img
+            - generic [ref=e1356]:
+              - 'img "Соляр: астрологический прогноз на год" [ref=e1358]'
+              - generic [ref=e1359]:
+                - generic [ref=e1361]: Прогнозы
+                - 'heading "Соляр: астрологический прогноз на год" [level=3] [ref=e1362]'
+              - generic [ref=e1363]:
+                - paragraph [ref=e1364]: Что такое соляр и как использовать эту технику для планирования важных событий и понимания энергий года.
+                - generic [ref=e1365]:
+                  - generic [ref=e1366]:
+                    - img [ref=e1367]
+                    - generic [ref=e1369]: 20 февраля 2025
+                  - generic [ref=e1370]:
+                    - img [ref=e1371]
+                    - generic [ref=e1374]: 9 мин
+                - button "Читать" [ref=e1375] [cursor=pointer]:
+                  - text: Читать
+                  - img
+          - generic [ref=e1378]:
+            - heading "Не пропустите новые статьи" [level=3] [ref=e1379]
+            - paragraph [ref=e1380]: Подпишитесь на наш Telegram-канал, чтобы первыми получать новые материалы о астрологии, самопознании и личностном росте.
+            - link "Подписаться на канал" [ref=e1381] [cursor=pointer]:
+              - /url: https://t.me/lifeinastro
+    - contentinfo [ref=e1382]:
+      - generic [ref=e1383]:
+        - generic [ref=e1384]:
+          - generic [ref=e1385]:
+            - generic [ref=e1386]:
+              - img [ref=e1388]
+              - heading "Life in Astro" [level=3] [ref=e1390]
+            - paragraph [ref=e1391]: Профессиональные астрологические консультации для глубинного понимания себя. Помогаю людям найти свой путь через кризисы и трансформации.
+            - generic [ref=e1392]:
+              - img [ref=e1393]
+              - generic [ref=e1396]: Консультации по всему миру онлайн
+          - generic [ref=e1397]:
+            - heading "Быстрые ссылки" [level=4] [ref=e1398]
+            - navigation "Быстрая навигация по сайту" [ref=e1399]:
+              - list [ref=e1400]:
+                - listitem [ref=e1401]:
+                  - link "Услуги" [ref=e1402] [cursor=pointer]:
+                    - /url: "#services"
+                - listitem [ref=e1403]:
+                  - link "Обо мне" [ref=e1404] [cursor=pointer]:
+                    - /url: "#about"
+                - listitem [ref=e1405]:
+                  - link "Отзывы" [ref=e1406] [cursor=pointer]:
+                    - /url: "#testimonials"
+                - listitem [ref=e1407]:
+                  - link "Блог" [ref=e1408] [cursor=pointer]:
+                    - /url: "#blog"
+                - listitem [ref=e1409]:
+                  - link "Контакты" [ref=e1410] [cursor=pointer]:
+                    - /url: "#contact"
+          - generic [ref=e1411]:
+            - heading "Связь" [level=4] [ref=e1412]
+            - generic [ref=e1413]:
+              - generic [ref=e1414]:
+                - img [ref=e1415]
+                - generic [ref=e1418]: Email
+              - link "lifeinastro.tg@gmail.com" [ref=e1419] [cursor=pointer]:
+                - /url: mailto:lifeinastro.tg@gmail.com
+            - generic [ref=e1420]:
+              - link "Telegram канал - Астрологические инсайты" [ref=e1421] [cursor=pointer]:
+                - /url: https://t.me/lifeinastro
+                - img [ref=e1422]
+                - generic [ref=e1424]:
+                  - generic [ref=e1425]: Telegram канал
+                  - generic [ref=e1426]: Астрологические инсайты
+              - link "Астробот - Помощь и консультации" [ref=e1427] [cursor=pointer]:
+                - /url: https://t.me/lifeinastro_bot
+                - img [ref=e1428]
+                - generic [ref=e1431]:
+                  - generic [ref=e1432]: Астробот
+                  - generic [ref=e1433]: Помощь и консультации
+              - link "Бот мечты - Реализация мечт" [ref=e1434] [cursor=pointer]:
+                - /url: https://t.me/AstroSNai_bot
+                - img [ref=e1435]
+                - generic [ref=e1438]:
+                  - generic [ref=e1439]: Бот мечты
+                  - generic [ref=e1440]: Реализация мечт
+        - generic [ref=e1441]:
+          - heading "Готовы начать трансформацию?" [level=3] [ref=e1442]
+          - paragraph [ref=e1443]: Запишитесь на персональную астрологическую консультацию и откройте новые грани себя через древнюю мудрость звёзд.
+          - link "Записаться на консультацию" [ref=e1444] [cursor=pointer]:
+            - /url: https://forms.gle/uXqtAvbuG2G3pk5z7
+        - generic [ref=e1445]:
+          - generic [ref=e1446]:
+            - generic [ref=e1447]: © 2025 Life in Astro. Создано с
+            - img [ref=e1448]
+            - generic [ref=e1450]: для вашей трансформации.
+          - generic [ref=e1451]:
+            - button "Политика конфиденциальности" [ref=e1452] [cursor=pointer]
+            - button "Условия использования" [ref=e1453] [cursor=pointer]
+        - paragraph [ref=e1455]: Этот сайт разработан с соблюдением стандартов доступности WCAG 2.1 AA для всех пользователей, включая людей с ограниченными возможностями.
+        - generic [ref=e1456]:
+          - generic [ref=e1462] [cursor=pointer]:
+            - img [ref=e1464]
+            - heading "Политика конфиденциальности" [level=3] [ref=e1466]
+          - generic [ref=e1472] [cursor=pointer]:
+            - generic [ref=e1473]:
+              - img [ref=e1475]
+              - heading "Условия использования" [level=3] [ref=e1478]
+            - img [ref=e1479]
+```
