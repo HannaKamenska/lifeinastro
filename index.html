@@ -3,11 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Адаптация под цветовую схему -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf6f0">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
     <title>Индивидуальные астрологические консультации | Астрология и психология трансформации</title>
     <meta name="description" content="Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию." />
     <meta name="keywords" content="астрология, астрологические консультации, психология, трансформация, натальная карта, астролог, кризис, самопознание" />
     <meta name="author" content="Life in Astro" />
-    
+
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
     <meta name="language" content="Russian" />
@@ -26,6 +33,6 @@
         history.replaceState(null, "", redirect);
    }
     </script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/assets/main.[hash].js"></script>
   </body>
 </html>
