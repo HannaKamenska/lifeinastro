@@ -156,6 +156,8 @@ const Services = () => {
               return (
                 <Card 
                   key={service.id} 
+                  role="article"
+                  data-testid="service-card"
                   className="hover-lift shadow-soft border-border/50 bg-card/80 backdrop-blur-sm"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -197,7 +199,7 @@ const Services = () => {
                           href="https://forms.gle/uXqtAvbuG2G3pk5z7"
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label={`Записаться на консультацию${service.title}`}
+                          aria-label={`Записаться на консультацию ${service.title}`}
                         >
                           Записаться на консультацию
                         </a>
@@ -233,7 +235,9 @@ const Services = () => {
               const IconComponent = service.icon;
               return (
                 <Card 
-                  key={service.id} 
+                  key={service.id}
+                  role="article" 
+                  data-testid="service-card"
                   className="hover-lift shadow-soft border-accent/30 bg-gradient-to-br from-card/90 to-accent/5 backdrop-blur-sm"
                   style={{ animationDelay: `${(index + 5) * 0.1}s` }}
                 >
@@ -275,7 +279,7 @@ const Services = () => {
                           href="https://forms.gle/uXqtAvbuG2G3pk5z7"
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label={`Записаться на консультацию${service.title}`}
+                          aria-label={`Записаться на консультацию ${service.title}`}
                         >
                           Записаться на консультацию
                         </a>

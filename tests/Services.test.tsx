@@ -7,22 +7,29 @@ describe('Services - Критичный компонент', () => {
     render(<Services />);
 
     // Проверяем наличие услуг
-    const services = screen.getAllByRole('article') || screen.getAllByTestId('service-card');
+    const byRole = screen.queryAllByRole('article');
+    const services = byRole.length ? byRole : screen.queryAllByTestId('service-card');
+    
     expect(services.length).toBeGreaterThan(0);
   });
 
   it('✅ Каждая услуга должна иметь название и цену', () => {
     render(<Services />);
 
-    const serviceCards = screen.getAllByRole('article') || screen.getAllByTestId('service-card');
+    const byRole = screen.queryAllByRole('article');
+    const serviceCards = byRole.length ? byRole : screen.queryAllByTestId('service-card');
+    
+    expect(serviceCards.length).toBeGreaterThan(0);
 
     serviceCards.forEach(card => {
+      const utils = within(card as HTMLElement);
+
       // Проверяем наличие заголовка
-      const heading = within(card).getByRole('heading') || within(card).queryByText(/.+/);
+      const heading = utils.queryByRole('heading') ?? utils.queryByText(/.+/);
       expect(heading).toBeInTheDocument();
 
       // Проверяем наличие цены (€, EUR, или числа)
-      const priceText = within(card).getByText(/€|EUR|\d+/) || within(card).queryByText(/price|цена/i);
+      const priceText = utils.queryByText(/€|EUR|\d+/) ?? utils.queryByText(/price|цена/i);
       expect(priceText).toBeInTheDocument();
     });
   });
@@ -30,7 +37,7 @@ describe('Services - Критичный компонент', () => {
   it('✅ Должны быть кнопки для получения дополнительной информации', () => {
     render(<Services />);
 
-    const buttons = screen.getAllByRole('button');
+    const buttons = screen.queryAllByRole('button');
     expect(buttons.length).toBeGreaterThan(0);
   });
 });
