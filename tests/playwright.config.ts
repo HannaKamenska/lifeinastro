@@ -1,7 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 
+// ВАЖНО: testDir задаём относительным путём от текущего файла.
+// tests/playwright.config.ts -> корневая папка e2e находится на уровень выше.
 export default defineConfig({
-  testDir: './tests',
+  testDir: '../e2e',
+  testMatch: ['**/*.spec.ts', '**/*.e2e.ts'],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
@@ -13,14 +16,8 @@ export default defineConfig({
     screenshot: 'only-on-failure',
   },
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
+    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    { name: 'mobile-chrome', use: { ...devices['Pixel 5'] } },
   ],
   webServer: {
     command: 'npm run dev',

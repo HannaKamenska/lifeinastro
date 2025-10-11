@@ -7,15 +7,16 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    // ВАЖНО: этот файл предназначен только для Vitest и НЕ должен импортироваться Playwright-ом
     setupFiles: ['./vitest.setup.ts'],
     include: ['tests/**/*.{test,spec}.ts?(x)'],
-    exclude: ['e2e/**', 'node_modules', 'dist'], // ВАЖНО: исключаем e2e из запуска Vitest
+    // Исключаем e2e из Vitest, чтобы он не зацепил Playwright-спеки
+    exclude: ['e2e/**', 'node_modules', 'dist'],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       exclude: [
         'node_modules/',
-        'src/test/',
         '**/*.d.ts',
         '**/*.config.*',
         'src/main.tsx',
