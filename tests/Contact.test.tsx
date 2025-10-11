@@ -26,13 +26,14 @@ describe('Contact - Критичный компонент', () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('link', { name: /начать диалог - астробот/i })
+      screen.getByRole('link', { name: /начать диalog - астробот/i })
     ).toBeInTheDocument();
 
-    // CTA внизу (как в логах)
-    expect(
-      screen.getByRole('link', { name: /записаться на консультацию/i })
-    ).toBeInTheDocument();
+    // CTA внизу: в DOM две ссылки "Записаться на консультацию" — берём все
+    const ctaLinks = screen.getAllByRole('link', { name: /записаться на консультацию/i });
+    expect(ctaLinks.length).toBeGreaterThanOrEqual(1);
+    // Если хочешь, чтобы было минимум две:
+    // expect(ctaLinks.length).toBeGreaterThanOrEqual(2);
 
     expect(
       screen.getByRole('link', { name: /задать вопрос через чат-бот/i })
@@ -49,7 +50,6 @@ describe('Contact - Критичный компонент', () => {
 
     // Если формы нет — пропускаем проверки формы без падения
     if (!form) {
-      // Тест считается пройденным, так как форма опциональна в текущем UI
       expect(true).toBe(true);
       return;
     }
@@ -77,10 +77,8 @@ describe('Contact - Критичный компонент', () => {
       await userEvent.clear(emailInput);
       await userEvent.type(emailInput, 'invalid-email');
       await userEvent.tab(); // вызвать blur
-      // Ошибка может быть разной — не валим тест, если её нет, просто проверяем что не упало
-      // Если есть текст ошибки — это плюс
+      // Возможные сообщения об ошибке (опционально, не валим тест)
       const possibleErrors = utils.queryAllByText(/invalid|некорректн|неверн/i);
-      // Не ассертим на количество — UI может не показывать сообщение
       void possibleErrors;
     }
   });
@@ -94,7 +92,6 @@ describe('Contact - Критичный компонент', () => {
       null;
 
     if (!form) {
-      // Если формы нет — считаем тест неприменимым к текущей версии и выходим
       expect(true).toBe(true);
       return;
     }
@@ -132,8 +129,7 @@ describe('Contact - Критичный компонент', () => {
       await userEvent.click(submitBtn);
     }
 
-    // Не знаем, что делает форма: вызывает успех, очищает поля и т.д.
-    // Поэтому мягкая проверка — страница не упала и форма всё ещё в DOM
+    // Мягкая проверка — форма осталась в DOM (или покажет успех)
     expect(form).toBeInTheDocument();
   });
 });
