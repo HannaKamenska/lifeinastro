@@ -7,7 +7,7 @@ afterEach(() => {
   cleanup();
 });
 
-// Моки — ок для Vitest, Playwright это не должен видеть
+// Моки — они нужны только в Vitest (Playwright их не видит)
 global.IntersectionObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
@@ -16,7 +16,7 @@ global.IntersectionObserver = vi.fn().mockImplementation(() => ({
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: vi.fn().mockImplementation((query) => ({
+  value: vi.fn().mockImplementation((query: string) => ({
     matches: false,
     media: query,
     onchange: null,
