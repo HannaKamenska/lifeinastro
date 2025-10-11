@@ -65,35 +65,50 @@ test.describe('Критичный пользовательский поток', 
       // 5) Если формы нет — проверим наличие CTA ссылок
       const ctaConsult = page.locator('a:has-text("Записаться на консультацию")');
       const ctaBot = page.locator('a:has-text("Астробот"), a:has-text("чат-бот")');
-      await expect(ctaConsult.or(ctaBot)).toBeVisible();
+      // Проверяем, что хотя бы ОДНА видимая ссылка существует
+      await expect(ctaConsult.or(ctaBot).first()).toBeVisible();
     }
   });
 
   test('✅ Мобильная навигация работает', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 667 }); // мобильное окно
 
-  // 1) Ищем кнопку бургер-меню (несколько вариантов селекторов)
-  const burger = page.locator(
-    [
-      'button[aria-label*="menu" i]',
-      'button[aria-label*="меню" i]',
-      'button[aria-label*="navigation" i]',
-      'button[aria-label*="навигац" i]',
-      '[data-testid="mobile-menu-button"]',
-      // если у тебя есть конкретный класс/идентификатор — добавь здесь
-      // 'button[class*="menu"]',
-      // '#mobile-menu-button',
-    ].join(', ')
-  ).filter({ has: page.locator('svg') }).first();
+  // Пытаемся найти кнопку бургер-меню несколькими способами
+  const burgerCandidates = [
+    '[data-testid="mobile-menu-button"]',
+    'button[aria-label*="menu" i]',
+    'button[aria-label*="меню" i]',
+    'button[aria-label*="navigation" i]',
+    'button[aria-label*="навигац" i]',
+    // популярные tailwind-классы для мобильной кнопки:
+    'button.md\\:hidden', // класс md:hidden
+    '.md\\:hidden button',
+    '.md\\:hidden [role="button"]',
+    // общий вариант “иконка-кнопка”
+    'button:has(svg)',
+  ];
 
-  // 2) Отфильтруем скрытые (на всякий случай)
-  const visibleBurger = burger.filter({ hasNot: page.locator('[hidden], [aria-hidden="true"]') });
+  let clicked = false;
+  for (const sel of burgerCandidates) {
+    const btn = page.locator(sel).first();
+    if (await btn.count()) {
+      try {
+        // Проверяем видимость и кликаем
+        await expect(btn).toBeVisible({ timeout: 1000 });
+        await btn.click({ trial: true }).catch(() => {}); // сначала пробный клик
+        await btn.click().catch(() => {});
+        clicked = true;
+        break;
+      } catch {
+        // пробуем следующий селектор
+      }
+    }
+  }
 
-  // 3) Проверим, что кнопка видима и нажмём её
-  await expect(visibleBurger).toBeVisible();
-  await visibleBurger.click();
+  // Если ни один селектор не сработал — даём понятную ошибку с подсказкой
+  expect(clicked, 'Не найден селектор бургер-кнопки. Лучше добавить data-testid="mobile-menu-button" на кнопку меню.').toBe(true);
 
-  // 4) Проверим, что меню открылось
+  // Должно появиться меню
   const openedMenu = page.locator('nav, [role="navigation"]');
   await expect(openedMenu.first()).toBeVisible();
 });

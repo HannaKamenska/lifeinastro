@@ -15,13 +15,13 @@
           - img [ref=e11]
           - text: Life in Astro
         - generic [ref=e13]:
-          - link "Перейти к разделу услуг" [active] [ref=e14] [cursor=pointer]:
+          - link "Перейти к разделу услуг" [ref=e14] [cursor=pointer]:
             - /url: "#services"
             - text: Услуги
           - link "Перейти к разделу о себе" [ref=e15] [cursor=pointer]:
             - /url: "#about"
             - text: Обо мне
-          - link "Перейти к контактам" [ref=e16] [cursor=pointer]:
+          - link "Перейти к контактам" [active] [ref=e16] [cursor=pointer]:
             - /url: "#contact"
             - text: Контакты
           - link "Перейти к блогу" [ref=e17] [cursor=pointer]:
