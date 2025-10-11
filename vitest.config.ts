@@ -7,7 +7,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/test/setup.ts'],
+    setupFiles: ['./vitest.setup.ts'],
     include: ['tests/**/*.{test,spec}.ts?(x)'],
     exclude: ['e2e/**', 'node_modules', 'dist'], // ВАЖНО: исключаем e2e из запуска Vitest
     coverage: {
