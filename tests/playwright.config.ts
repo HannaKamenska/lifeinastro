@@ -16,7 +16,7 @@ export default defineConfig({
 
   // Глобальные настройки браузера
   use: {
-    baseURL: 'http://localhost:5173',   // критично: чтобы page.goto('/') работал
+    baseURL: 'http://localhost:8082', // <-- Порт 8082
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
@@ -30,7 +30,7 @@ export default defineConfig({
   // Автозапуск dev-сервера перед тестами
   webServer: {
     command: 'npm run dev',
-    url: 'http://localhost:5173',
+    url: 'http://localhost:8082',      // <-- Порт 8082
     reuseExistingServer: !process.env.CI,
   },
 });
