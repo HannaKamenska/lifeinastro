@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@test/src-test-utils';
-import Contact from '../Contact';
+import Contact from '../src/components/Contact';
 
 describe('Contact - Критичный компонент', () => {
   it('✅ Форма должна отображаться с обязательными полями', () => {

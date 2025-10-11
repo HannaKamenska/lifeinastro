@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@test/src-test-utils';
-import Navigation from '../Navigation';
+import Navigation from '../src/components/Navigation';
 
 describe('Navigation - Критичный компонент', () => {
   it('✅ Должен отображать все основные ссылки', () => {

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen, within } from '@test/src-test-utils';
-import Services from '../Services';
+import Services from '../src/components/Services';
 
 describe('Services - Критичный компонент', () => {
   it('✅ Должен отображать список услуг', () => {

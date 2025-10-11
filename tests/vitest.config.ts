@@ -8,6 +8,8 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
+    include: ['tests/**/*.{test,spec}.ts?(x)'],
+    exclude: ['e2e/**', 'node_modules', 'dist'], // ВАЖНО: исключаем e2e из запуска Vitest
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
@@ -17,12 +19,15 @@ export default defineConfig({
         '**/*.d.ts',
         '**/*.config.*',
         'src/main.tsx',
+        'dist',
+        'e2e/**',
       ],
     },
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@test': path.resolve(__dirname, './tests'),
     },
   },
 });
