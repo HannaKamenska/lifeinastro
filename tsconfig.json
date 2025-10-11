@@ -10,6 +10,7 @@
       "@/*": ["./src/*"],
       "@test/*": ["tests/*"]
     },
+  
     "noImplicitAny": false,
     "noUnusedParameters": false,
     "skipLibCheck": true,
