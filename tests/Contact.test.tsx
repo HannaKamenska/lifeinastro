@@ -12,7 +12,7 @@ describe('Contact - Критичный компонент', () => {
       screen.getByRole('heading', { name: /контакты и связь/i })
     ).toBeInTheDocument();
 
-    // Ключевые ссылки (они есть в твоём DOM)
+    // Ключевые ссылки (они есть в DOM)
     expect(
       screen.getByRole('link', { name: /написать письмо - email/i })
     ).toBeInTheDocument();
@@ -25,15 +25,14 @@ describe('Contact - Критичный компонент', () => {
       screen.getByRole('link', { name: /подписаться - telegram канал/i })
     ).toBeInTheDocument();
 
+    // Исправлено: точная строка "диалог", без опечаток и с флажком i
     expect(
-      screen.getByRole('link', { name: /начать диalog - астробот/i })
+      screen.getByRole('link', { name: /начать диалог - астробот/i })
     ).toBeInTheDocument();
 
-    // CTA внизу: в DOM две ссылки "Записаться на консультацию" — берём все
+    // CTA внизу: в DOM две ссылки "Записаться на консультацию" — проверяем массивом
     const ctaLinks = screen.getAllByRole('link', { name: /записаться на консультацию/i });
     expect(ctaLinks.length).toBeGreaterThanOrEqual(1);
-    // Если хочешь, чтобы было минимум две:
-    // expect(ctaLinks.length).toBeGreaterThanOrEqual(2);
 
     expect(
       screen.getByRole('link', { name: /задать вопрос через чат-бот/i })
@@ -43,18 +42,15 @@ describe('Contact - Критичный компонент', () => {
   it('✅ Если присутствует форма — она должна быть доступной и с полями', async () => {
     render(<Contact />);
 
-    // Могут быть два случая: реальная <form> или её нет.
     const formByRole = screen.queryByRole('form');
     const formByTestId = screen.queryByTestId('contact-form');
     const form = formByRole ?? formByTestId ?? null;
 
-    // Если формы нет — пропускаем проверки формы без падения
     if (!form) {
       expect(true).toBe(true);
       return;
     }
 
-    // Внутренние поля формы (делаем устойчиво)
     const utils = within(form as HTMLElement);
 
     const nameInput =
@@ -72,12 +68,10 @@ describe('Contact - Критичный компонент', () => {
     expect(nameInput).toBeInTheDocument();
     expect(emailInput).toBeInTheDocument();
 
-    // Базовая валидация email (если предусмотрена)
     if (emailInput) {
       await userEvent.clear(emailInput);
       await userEvent.type(emailInput, 'invalid-email');
-      await userEvent.tab(); // вызвать blur
-      // Возможные сообщения об ошибке (опционально, не валим тест)
+      await userEvent.tab();
       const possibleErrors = utils.queryAllByText(/invalid|некорректн|неверн/i);
       void possibleErrors;
     }
@@ -118,7 +112,6 @@ describe('Contact - Критичный компонент', () => {
       await userEvent.type(emailInput, 'anna@example.com');
     }
 
-    // Кнопка отправки
     const submitBtn =
       utils.queryByRole('button', { name: /submit|отправить|send/i }) ??
       utils.queryByRole('button');
@@ -129,7 +122,6 @@ describe('Contact - Критичный компонент', () => {
       await userEvent.click(submitBtn);
     }
 
-    // Мягкая проверка — форма осталась в DOM (или покажет успех)
     expect(form).toBeInTheDocument();
   });
 });
