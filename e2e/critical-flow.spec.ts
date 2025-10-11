@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Критичный пользовательский поток', () => {
   test.beforeEach(async ({ page, baseURL }) => {
-    await page.goto(baseURL ?? '/');
+    await page.goto((baseURL ?? 'http://localhost:5173') + '/');
   });
 
   test('✅ Пользователь может найти услуги и связаться', async ({ page }) => {
@@ -85,7 +85,7 @@ test.describe('Критичный пользовательский поток', 
 
   test('✅ Сайт загружается быстро', async ({ page, baseURL }) => {
     const t0 = Date.now();
-    await page.goto(baseURL ?? '/');
+    await page.goto((baseURL ?? 'http://localhost:5173') + '/');
     const t1 = Date.now();
     expect(t1 - t0).toBeLessThan(5000); // до 5 секунд на холодный старт в контейнере
   });
