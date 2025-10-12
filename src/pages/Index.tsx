@@ -11,7 +11,6 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    // Add structured data for SEO
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
@@ -23,10 +22,7 @@ const Index = () => {
         "name": "Life in Astro",
         "jobTitle": "Астролог-консультант"
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "по всему миру (онлайн)"
-      },
+      "areaServed": { "@type": "Place", "name": "по всему миру (онлайн)" },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Астрологические услуги",
@@ -59,41 +55,28 @@ const Index = () => {
         "contactType": "customer service",
         "availableLanguage": ["Russian", "English"]
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "4"
-      }
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "4" }
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
-
     return () => {
-      // Cleanup on unmount
       const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
+      if (existingScript) document.head.removeChild(existingScript);
     };
   }, []);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Фоновый слой */}
       <div className="bg-astro-sky bg-cover bg-center fixed inset-0 -z-10" />
-      <a 
-        href="#main-content" 
-        className="skip-link"
-        tabIndex={1}
-      >
+      <a href="#main-content" className="skip-link" tabIndex={1}>
         Перейти к основному содержанию
       </a>
-      
+
       <Navigation />
-      
+
       <main id="main-content" role="main">
         <Hero />
         <Services />
@@ -103,7 +86,7 @@ const Index = () => {
         <Contact />
         <Blog />
       </main>
-      
+
       <Footer />
     </div>
   );
