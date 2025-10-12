@@ -242,6 +242,18 @@ const Blog = () => {
                       </p>
                     ))}
                   </div>
+                  <div className="flex justify-end mt-4">
+                    <CollapsibleTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        aria-label="Свернуть статью"
+                        className="text-xl text-muted-foreground hover:text-primary"
+                      >
+                        ×
+                      </Button>
+                    </CollapsibleTrigger>
+                  </div>
                 </CardContent>
               </CollapsibleContent>
             </Card>

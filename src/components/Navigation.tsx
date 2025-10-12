@@ -33,11 +33,10 @@ const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/95 backdrop-blur-md shadow-soft border-b border-border/50' 
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        bg-background/70 backdrop-blur-md shadow-soft border-b-[0.5px] border-border/30
+        ${isScrolled ? 'shadow-soft border-border/50' : ''}
+      `}
       role="navigation"
       aria-label="Основная навигация"
     >

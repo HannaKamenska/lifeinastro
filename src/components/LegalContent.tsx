@@ -1,15 +1,16 @@
 import React from "react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, Shield, FileText } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface LegalContentProps {
   type: "privacy" | "terms";
+  onClose?: () => void;
+  defaultOpen?: boolean;
 }
 
-const LegalContent = ({ type }: LegalContentProps) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-
+const LegalContent = ({ type, onClose, defaultOpen = false }: LegalContentProps) => {
   const content = {
     privacy: {
       title: "Политика конфиденциальности",
@@ -73,59 +74,61 @@ const LegalContent = ({ type }: LegalContentProps) => {
   const IconComponent = currentContent.icon;
 
   return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <CollapsibleTrigger asChild>
-        <Card className="cursor-pointer hover:shadow-soft transition-shadow border-border/50 bg-card/90 backdrop-blur-sm">
-          <CardHeader className="pb-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 gradient-primary rounded-full flex items-center justify-center">
-                  <IconComponent className="w-5 h-5 text-primary-foreground" aria-hidden="true" />
+    <Accordion
+      type="single"
+      defaultValue={defaultOpen ? "privacy" : undefined}
+      collapsible
+    >
+      <AccordionItem value="privacy">
+        <AccordionTrigger>
+          <span className="flex items-center gap-2">
+            <Shield className="text-gold" />
+            Политика конфиденциальности
+          </span>
+        </AccordionTrigger>
+        <AccordionContent>
+          <Collapsible defaultOpen>
+            <Card className="mt-2 border-border/50 bg-card/95 backdrop-blur-sm">
+              <CardContent className="p-6 space-y-6">
+                {currentContent.sections.map((section, index) => (
+                  <div key={index}>
+                    <h4 className="font-semibold text-card-foreground mb-2">
+                      {section.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {section.content}
+                    </p>
+                  </div>
+                ))}
+
+                <div className="pt-4 border-t border-border/30">
+                  <p className="text-xs text-muted-foreground">
+                    Последнее обновление: {new Date().toLocaleDateString('ru-RU')}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    По вопросам обращайтесь: 
+                    <a href="mailto:lifeinastro.tg@gmail.com" className="text-primary hover:underline ml-1">
+                      lifeinastro.tg@gmail.com
+                    </a>
+                  </p>
                 </div>
-                <CardTitle className="text-lg text-card-foreground">
-                  {currentContent.title}
-                </CardTitle>
-              </div>
-              <ChevronDown 
-                className={`w-5 h-5 text-muted-foreground transition-transform duration-200 ${
-                  isOpen ? 'rotate-180' : ''
-                }`}
-                aria-hidden="true"
-              />
-            </div>
-          </CardHeader>
-        </Card>
-      </CollapsibleTrigger>
-      
-      <CollapsibleContent>
-        <Card className="mt-2 border-border/50 bg-card/95 backdrop-blur-sm">
-          <CardContent className="p-6 space-y-6">
-            {currentContent.sections.map((section, index) => (
-              <div key={index}>
-                <h4 className="font-semibold text-card-foreground mb-2">
-                  {section.title}
-                </h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {section.content}
-                </p>
-              </div>
-            ))}
-            
-            <div className="pt-4 border-t border-border/30">
-              <p className="text-xs text-muted-foreground">
-                Последнее обновление: {new Date().toLocaleDateString('ru-RU')}
-              </p>
-              <p className="text-xs text-muted-foreground mt-1">
-                По вопросам обращайтесь: 
-                <a href="mailto:lifeinastro.tg@gmail.com" className="text-primary hover:underline ml-1">
-                  lifeinastro.tg@gmail.com
-                </a>
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-      </CollapsibleContent>
-    </Collapsible>
+
+                {/* Крупный крестик для сворачивания */}
+                <div className="flex justify-end mt-6">
+                  <button
+                    className="text-2xl font-bold text-gray-500 hover:text-primary p-2 rounded-full hover:bg-gray-200 transition"
+                    onClick={onClose}
+                    aria-label="Закрыть"
+                  >
+                    ×
+                  </button>
+                </div>
+              </CardContent>
+            </Card>
+          </Collapsible>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   );
 };
 

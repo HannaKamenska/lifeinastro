@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Heart, TrendingUp, Clock, Users, Briefcase, Search, Calendar, Flame, Euro, BaggageClaim, Moon } from "lucide-react";
-import ServiceDetails from "./ServiceDetails";
+import ServiceDetails from "@/components/ServiceDetails";
 import { useState, useEffect } from 'react';
 
 const Services = () => {
@@ -91,7 +91,7 @@ const Services = () => {
       id: 9,
       icon: Flame,
       title: "Энергетический баланс",
-      description: "Определение и гармонизация вашей личной силы и энергии",
+      description: "Определение и гармониизация вашей личной силы и энергии",
       price: "Бесплатно (donation welcome)",
       duration: "90 минут",
       category: "Индивидуальные",
@@ -132,6 +132,7 @@ const Services = () => {
   const standardServices = services.filter(service => service.category === "Стандартные");
   const individualServices = services.filter(service => service.category === "Индивидуальные");
   const [activeService, setActiveService] = useState<number | null>(null);
+  const [selectedService, setSelectedService] = useState<number | null>(null);
 
   return (
     <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">
@@ -207,12 +208,7 @@ const Services = () => {
                       <Button 
                         variant="outline" 
                         className="w-full border-primary/30 text-primary hover:bg-primary/10 focus-ring"
-                        onClick={() => {
-                          const detailsSection = document.getElementById(`service-details-${service.id}`);
-                          if (detailsSection) {
-                            detailsSection.scrollIntoView({ behavior: 'smooth' });
-                          }
-                        }}
+                        onClick={() => setSelectedService(service.id)}
                         aria-label={`Подробнее о ${service.title}`}
                       >
                         Подробнее
@@ -287,12 +283,7 @@ const Services = () => {
                       <Button 
                         variant="outline" 
                         className="w-full border-accent/30 text-accent-deep hover:bg-accent/10 focus-ring"
-                        onClick={() => {
-                          const detailsSection = document.getElementById(`service-details-${service.id}`);
-                          if (detailsSection) {
-                            detailsSection.scrollIntoView({ behavior: 'smooth' });
-                          }
-                        }}
+                        onClick={() => setSelectedService(service.id)}
                         aria-label={`Подробнее о ${service.title}`}
                       >
                         Подробнее
@@ -305,14 +296,35 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Service Details Sections */}
-        <div className="space-y-8 mt-16">
-          {services.map((service) => (
-            <div key={`details-${service.id}`} id={`service-details-${service.id}`}>
-              <ServiceDetails serviceId={`service-${service.id}`} />
+        {/* Service Details Modal */}
+        {selectedService !== null && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+            <div
+              className="
+                relative
+                bg-white
+                rounded-lg
+                shadow-lg
+                w-full
+                max-w-2xl
+                max-h-[90vh]
+                p-6
+                overflow-y-auto
+                sm:p-8
+              "
+              style={{ boxSizing: "border-box" }}
+            >
+              <button
+                className="absolute top-2 right-2 text-3xl font-bold text-gray-500 hover:text-gray-800 p-2 rounded-full hover:bg-gray-200 transition"
+                onClick={() => setSelectedService(null)}
+                aria-label="Закрыть окно"
+              >
+                ×
+              </button>
+              <ServiceDetails serviceId={`service-${selectedService}`} />
             </div>
-          ))}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
