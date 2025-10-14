@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
-import { Dialog, DialogContent, DialogTitle } from "@radix-ui/react-dialog";
+import { Dialog, DialogContent } from "@radix-ui/react-dialog";
+import LegalContent from "@/components/LegalContent";
 
 const COOKIE_KEY = "cookie_consent";
 
-interface CookieBannerProps {
-  onShowLegal?: () => void;
-}
-
-export default function CookieBanner({ onShowLegal }: CookieBannerProps) {
+export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!localStorage.getItem(COOKIE_KEY)) setVisible(true);
+    if (!localStorage.getItem(COOKIE_KEY)) {
+      setVisible(true);
+    }
   }, []);
 
   const acceptCookies = () => {
@@ -31,8 +30,7 @@ export default function CookieBanner({ onShowLegal }: CookieBannerProps) {
           <button
             type="button"
             className="underline text-primary hover:text-accent bg-transparent border-0 p-0 m-0 cursor-pointer"
-            style={{ background: "none" }}
-            onClick={onShowLegal}
+            onClick={() => setOpen(true)}
           >
             политикой конфиденциальности
           </button>
@@ -45,10 +43,14 @@ export default function CookieBanner({ onShowLegal }: CookieBannerProps) {
           Принять
         </button>
       </div>
+
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent>
-          <DialogTitle>Заголовок окна</DialogTitle>
-          {/* ...ваше содержимое... */}
+        <DialogContent className="p-0 border-none bg-transparent">
+          <LegalContent
+            variant="modal"
+            type="privacy"
+            onClose={() => setOpen(false)}
+          />
         </DialogContent>
       </Dialog>
     </>
