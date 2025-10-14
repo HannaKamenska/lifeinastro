@@ -54,7 +54,7 @@ export default function App() {
               >
                 ×
               </button>
-              <LegalContent type="privacy" />
+              <LegalContent type="privacy" variant="modal" onClose={() => setShowLegal(null)} />
             </div>
           </div>
         )}

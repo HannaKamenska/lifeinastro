@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
             Трансформация через{" "}
-            <span className="text-primary-glow bg-gradient-to-r from-primary to-accent-deep bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-accent-deep bg-clip-text text-transparent">
               Астрологию
             </span>
           </h1>

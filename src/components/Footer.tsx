@@ -204,10 +204,10 @@ const Footer = () => {
         {/* Legal Content Sections */}
         <div className="mt-16 space-y-6">
           <div id="legal-privacy">
-            <LegalContent type="privacy" />
+            <LegalContent type="privacy" variant="static" />
           </div>
           <div id="legal-terms">
-            <LegalContent type="terms" />
+            <LegalContent type="terms" variant="static" />
           </div>
         </div>
       </div>

@@ -17,12 +17,13 @@ const Index: FC = () => {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Life in Astro - Астрологические консультации",
-      "description": "Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию.",
+      "description":
+        "Профессиональные астрологические консультации для глубинного понимания себя. Помощь в кризисах, поиск смысла и жизненного пути через астрологию и психологию.",
       "serviceType": "Астрологические консультации",
       "provider": {
         "@type": "Person",
         "name": "Life in Astro",
-        "jobTitle": "Астролог-консультант"
+        "jobTitle": "Астролог-консультант",
       },
       "areaServed": { "@type": "Place", "name": "по всему миру (онлайн)" },
       "hasOfferCatalog": {
@@ -34,30 +35,34 @@ const Index: FC = () => {
             "itemOffered": {
               "@type": "Service",
               "name": "Натальная карта",
-              "description": "Полный анализ личности через призму астрологии"
+              "description": "Полный анализ личности через призму астрологии",
             },
             "price": "Бесплатно (donation welcome)",
-            "priceCurrency": "EUR"
+            "priceCurrency": "EUR",
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
               "name": "Синастрия",
-              "description": "Совместимость и динамика отношений"
+              "description": "Совместимость и динамика отношений",
             },
             "price": "Бесплатно (donation welcome)",
-            "priceCurrency": "EUR"
-          }
-        ]
+            "priceCurrency": "EUR",
+          },
+        ],
       },
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "lifeinastro.tg@gmail.com",
         "contactType": "customer service",
-        "availableLanguage": ["Russian", "English"]
+        "availableLanguage": ["Russian", "English"],
       },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "4" }
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "4",
+      },
     };
 
     const script = document.createElement("script");
@@ -66,7 +71,9 @@ const Index: FC = () => {
     document.head.appendChild(script);
 
     return () => {
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      const existingScript = document.querySelector(
+        'script[type="application/ld+json"]'
+      );
       if (existingScript) document.head.removeChild(existingScript);
     };
   }, []);
@@ -78,6 +85,7 @@ const Index: FC = () => {
         Перейти к основному содержанию
       </a>
 
+      {/* ✅ Шапка навигации */}
       <Navigation />
 
       <main id="main-content" role="main">
@@ -90,6 +98,7 @@ const Index: FC = () => {
         <Blog />
       </main>
 
+      {/* ✅ Подвал с исправленным LegalContent */}
       <Footer />
     </div>
   );

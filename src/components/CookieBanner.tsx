@@ -4,7 +4,11 @@ import LegalContent from "@/components/LegalContent";
 
 const COOKIE_KEY = "cookie_consent";
 
-export default function CookieBanner() {
+interface CookieBannerProps {
+  onShowLegal?: () => void;
+}
+
+export default function CookieBanner({ onShowLegal }: CookieBannerProps) {
   const [visible, setVisible] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -30,7 +34,10 @@ export default function CookieBanner() {
           <button
             type="button"
             className="underline text-primary hover:text-accent bg-transparent border-0 p-0 m-0 cursor-pointer"
-            onClick={() => setOpen(true)}
+            onClick={() => {
+              setOpen(true);
+              onShowLegal?.(); // 🔔 вызываем внешний обработчик, если он передан
+            }}
           >
             политикой конфиденциальности
           </button>
