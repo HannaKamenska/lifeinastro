@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -11,7 +12,6 @@ export default {
     },
     extend: {
       backgroundImage: {
-        // на время укажите реальный файл из public
         "astro-sky": "url('/public/assets/bg-sky.jpg')",
       },
       fontFamily: {
@@ -68,5 +68,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

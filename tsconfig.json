@@ -9,14 +9,13 @@
       "@/*": ["./src/*"],
       "@test/*": ["tests/*"]
     },
-  
-    "noImplicitAny": false,
-    "noUnusedParameters": false,
-    "skipLibCheck": true,
-    "allowJs": true,
-    "noUnusedLocals": false,
-    "strictNullChecks": false,
-    "types": ["vitest/globals", "vite/client"],
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "skipLibCheck": false,
+    "allowJs": false,
+    "types": ["vitest/globals"]
   },
-  "include": ["src", "tests", "e2e/critical-flow.spec.ts", "vitest.config.ts"]
+  "include": ["src", "src/vite-env.d.ts", "tests", "e2e/critical-flow.spec.ts", "vitest.config.ts"]
 }

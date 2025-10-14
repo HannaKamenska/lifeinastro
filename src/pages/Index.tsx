@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import type { FC } from "react";
+
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -9,7 +11,7 @@ import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Index: FC = () => {
   useEffect(() => {
     const structuredData = {
       "@context": "https://schema.org",
@@ -62,6 +64,7 @@ const Index = () => {
     script.type = "application/ld+json";
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
+
     return () => {
       const existingScript = document.querySelector('script[type="application/ld+json"]');
       if (existingScript) document.head.removeChild(existingScript);
@@ -71,7 +74,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <div className="bg-astro-sky bg-cover bg-center fixed inset-0 -z-10" />
-      <a href="#main-content" className="skip-link" tabIndex={1}>
+      <a href="#main-content" className="skip-link" tabIndex={0}>
         Перейти к основному содержанию
       </a>
 
