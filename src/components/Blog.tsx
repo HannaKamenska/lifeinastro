@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Calendar, Clock, ArrowRight, BookOpen, ChevronDown } from "lucide-react";
-import React from "react";
 
 // Import blog images
 import blogEclipse from "@/assets/blog-eclipse.jpg";
@@ -14,19 +13,8 @@ import blogCareer from "@/assets/blog-career.jpg";
 import blogSolar from "@/assets/blog-solar.jpg";
 
 const Blog = () => {
-  const [openArticles, setOpenArticles] = React.useState<Set<number>>(new Set());
-
-  const toggleArticle = (articleId: number) => {
-    const newOpenArticles = new Set(openArticles);
-    if (newOpenArticles.has(articleId)) {
-      newOpenArticles.delete(articleId);
-    } else {
-      newOpenArticles.add(articleId);
-    }
-    setOpenArticles(newOpenArticles);
-  };
-
-  const articles = [
+ 
+    const articles = [
     {
       id: 1,
       title: "Коридор затмений - что важно знать",
@@ -102,7 +90,8 @@ const Blog = () => {
     <section id="blog" className="py-20 bg-secondary/30" aria-labelledby="blog-heading">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 id="blog-heading" className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 id="blog-heading" className="text-4xl md:text-5xl font-bold mb-6 text-foreground flex items-center justify-center gap-2">
+            <BookOpen className="w-6 h-6 text-primary" aria-hidden="true" />
             Блог и статьи
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -157,7 +146,7 @@ const Blog = () => {
                       className="gradient-mystical text-accent-foreground hover:shadow-mystical transition-smooth focus-ring"
                     >
                       Читать статью
-                      <ChevronDown className="ml-2 w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
+                      <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                     </Button>
                   </CollapsibleTrigger>
                 </div>
